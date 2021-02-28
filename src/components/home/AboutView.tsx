@@ -12,23 +12,23 @@ const useStyles = makeStyles(({ spacing }: Theme) => ({
 function AboutView() {
   const classes = useStyles()
   const md = `
-  # 关于我们
+  # 關於我們
 
-  \`RAP2\`是在\`RAP1\`基础上重做的新项目，它能给你提供方便的接口文档管理、Mock、导出等功能，包含两个组件(对应两个 Github Repository)。
+  \`RAP2\`是在\`RAP1\`基礎上重做的新專案，它能給你提供方便的介面文檔管理、Mock、匯出等功能，包含兩個元件（對應兩個 Github Repository）。
 
-  目前RAP2由\`阿里妈妈前端团队\`研发，由多个合作团队（包括开源社区）在维护。详请请见GitHub贡献者列表。
+  目前RAP2由\`阿里媽媽前端團隊\`開發，由多個合作團隊（包括開源社區）在維護。 詳請請見GitHub貢獻者清單。
 
-  GitHub仓库：
+  GitHub 儲存庫：
 
-  rap2-delos: 后端服务器仓库 [link](http://github.com/thx/rap2-delos)
+  rap2-delos: 後端伺服器儲存庫： [link](http://github.com/thx/rap2-delos)
 
-  rap2-dolores: 前端 React 项目仓库 [link](http://github.com/thx/rap2-dolores)
+  rap2-dolores: 前端 React 專案儲存庫： [link](http://github.com/thx/rap2-dolores)
 
-  相关开源、部署建议，请关注GitHub仓库首页README
+  相關開源、部署建議，請關注 GitHub 儲存庫首頁 README
 
-  同时欢迎您前往 [GitHub Issues](https://github.com/thx/rap2-delos/issues) 提出宝贵意见!
+  同時歡迎您前往 [GitHub Issues](https://github.com/thx/rap2-delos/issues) 提出寶貴意見!
 
-  钉钉群：11789704
+  釘釘群：11789704
 
   `
   return (

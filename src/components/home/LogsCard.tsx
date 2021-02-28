@@ -29,11 +29,11 @@ const LogUserView = ({ user }: any) => {
 }
 const LogTypeView = ({ type }: any) => {
   const typeName: any = ({
-    create: '创建了',
+    create: '創建了',
     update: '修改了',
-    delete: '删除了',
-    lock: '锁定了',
-    unlock: '释放了',
+    delete: '刪除了',
+    lock: '鎖定了',
+    unlock: '釋放了',
     join: '加入了',
     exit: '退出了',
   } as any)[type]
@@ -124,7 +124,7 @@ const JoinLogView = ({ log }: any) => {
     <div className="Log clearfix">
       <div className="Log-body">
         <LogUserView user={log.creator} />
-        <span className="Log-type">邀请</span>
+        <span className="Log-type">邀請</span>
         <UserLink user={log.user} />
         <span className="Log-type">加入了</span>
         <LogTargetView log={log} />
@@ -141,7 +141,7 @@ const ExitLogView = ({ log }: any) => {
     <div className="Log clearfix">
       <div className="Log-body">
         <LogUserView user={log.creator} />
-        <span className="Log-type">将</span>
+        <span className="Log-type">將</span>
         <UserLink user={log.user} />
         <span className="Log-type">移出了</span>
         <LogTargetView log={log} />
@@ -185,7 +185,7 @@ export const Log = ({ log }: any) => {
     case 'create':
       return targetLink ? (
         <div className="Log clearfix">
-          {userAvatar} <span className="body">{userLink} <span className="ml6 mr6">创建了</span> {targetLink}</span> {fromNow}
+          {userAvatar} <span className="body">{userLink} <span className="ml6 mr6">創建了</span> {targetLink}</span> {fromNow}
         </div>
       ) : null
     case 'update':
@@ -197,12 +197,12 @@ export const Log = ({ log }: any) => {
     case 'delete':
       return targetName ? (
         <div className="Log clearfix">
-          {userAvatar} <span className="body">{userLink} <span className="ml6 mr6">删除了</span> <s>{targetName}</s></span> {fromNow}
+          {userAvatar} <span className="body">{userLink} <span className="ml6 mr6">刪除了</span> <s>{targetName}</s></span> {fromNow}
         </div>
       ) : null
     case 'lock':
     case 'unlock':
-      typeName = ({ lock: '锁定', unlock: '释放' } as any)[log.type]
+      typeName = ({ lock: '鎖定', unlock: '釋放' } as any)[log.type]
       if (!log.repository || !log.module || !log.interface) { return null }
       return (
         <div className="Log clearfix">
@@ -224,7 +224,7 @@ export const Log = ({ log }: any) => {
 }
 const LogsCard = ({ logs }: any) => (
   <Card className="Logs card">
-    <div className="card-header">最近活动</div>
+    <div className="card-header">最近活動</div>
     {logs.fetching ? <Spin /> : (
       <div className="card-block">
         {logs.data.map((log: any) =>

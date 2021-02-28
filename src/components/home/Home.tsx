@@ -22,10 +22,10 @@ const Maiden = () => {
         color="primary"
         onClick={() => { setCreating(true) }}
       >
-        新建仓库
+        新建儲存庫
       </Button>
       <RepositoryForm
-        title="新建仓库"
+        title="新建儲存庫"
         open={creating}
         onClose={(ok: boolean) => {
           if (ok) {

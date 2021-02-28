@@ -19,13 +19,13 @@ import { logout } from 'actions/account'
 
 const options = [{
   key: 'myAccount',
-  text: '我的账户',
+  text: '我的帳戶',
 }, {
   key: 'preferences',
-  text: '偏好设置',
+  text: '喜好設定',
 }, {
   key: 'logout',
-  text: '注销',
+  text: '登出',
 }]
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -107,7 +107,7 @@ function AccountButton({ user }: { user: User }) {
       <Button
         color="inherit"
         aria-haspopup="true"
-        aria-label="账户"
+        aria-label="帳戶"
         onClick={handleToggle}
         ref={anchorRef}
       >
@@ -160,13 +160,13 @@ export default function MainMenu(props: Props) {
         <Toolbar className={classes.toolbar} variant="dense">
           <div className={classes.links}>
             <Link to="/" className={classes.logo}><Logo /> </Link>
-            <Link to="/" className={classes.link}><Button color="inherit"> 首页 </Button></Link>
-            <Link to="/repository/joined" className={classes.link}><Button color="inherit"> 仓库 </Button></Link>
-            <Link to="/organization/joined" className={classes.link}><Button color="inherit"> 团队 </Button></Link>
-            <Link to="/api" className={classes.link}><Button color="inherit"> 接口 </Button></Link>
-            <Link to="/status" className={classes.link}><Button color="inherit"> 状态 </Button></Link>
-            <Link to="/about" className={classes.link}><Button color="inherit"> 关于 </Button></Link>
-            <Button onClick={() => window.open('https://github.com/thx/rap2-delos/issues/new/choose')} color="inherit">问题反馈</Button>
+            <Link to="/" className={classes.link}><Button color="inherit"> 首頁 </Button></Link>
+            <Link to="/repository/joined" className={classes.link}><Button color="inherit"> 儲存庫 </Button></Link>
+            <Link to="/organization/joined" className={classes.link}><Button color="inherit"> 團隊 </Button></Link>
+            <Link to="/api" className={classes.link}><Button color="inherit"> 介面 </Button></Link>
+            <Link to="/status" className={classes.link}><Button color="inherit"> 狀態 </Button></Link>
+            <Link to="/about" className={classes.link}><Button color="inherit"> 關於 </Button></Link>
+            <Button onClick={() => window.open('https://github.com/thx/rap2-delos/issues/new/choose')} color="inherit">問題回饋</Button>
           </div>
           <AccountButton user={user} />
         </Toolbar>

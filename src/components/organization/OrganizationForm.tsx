@@ -75,7 +75,7 @@ function OrganizationForm(props: Props) {
       onClose={(_event, reason) => (reason !== 'backdropClick' && onClose())}
       TransitionComponent={SlideUp}
     >
-      <DialogTitle>新建团队</DialogTitle>
+      <DialogTitle>新建團隊</DialogTitle>
       <DialogContent dividers={true}>
         <div className={classes.form}>
           <Formik
@@ -115,7 +115,7 @@ function OrganizationForm(props: Props) {
                   <div className="rmodal-body">
                     {values.id > 0 &&
                       <div className={classes.formItem}>
-                        <div className={classes.formTitle}>项目Owner</div>
+                        <div className={classes.formTitle}>專案Owner</div>
                         {values.owner && (values.owner.id === auth.id)
                           ? <UserList
                             isMulti={false}
@@ -140,7 +140,7 @@ function OrganizationForm(props: Props) {
                     <div className={classes.formItem}>
                       <Field
                         name="name"
-                        label="团队名称"
+                        label="團隊名稱"
                         component={TextField}
                         fullWidth={true}
                       />
@@ -154,7 +154,7 @@ function OrganizationForm(props: Props) {
                       />
                     </div>
                     <div className={classes.formItem}>
-                      <div className={classes.formTitle}>团队成员</div>
+                      <div className={classes.formTitle}>團隊成員</div>
                       <UserList
                         isMulti={true}
                         loadOptions={loadUserOptions}

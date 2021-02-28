@@ -70,7 +70,7 @@ export function CreateButton() {
         onClick={() => setOpen(true)}
       >
         {' '}
-        新建团队{' '}
+        新建團隊{' '}
       </Button>
       <OrganizationForm open={open} onClose={() => setOpen(false)} />
     </span>
@@ -90,8 +90,8 @@ export function OrganizationsTypeDropdown({ url }: { url: string }) {
       value={url}
       onChange={e => handlePush(e.target.value as string)}
     >
-      <MenuItem value="/organization/joined">我的团队</MenuItem>
-      <MenuItem value="/organization/all">全部团队</MenuItem>
+      <MenuItem value="/organization/joined">我的團隊</MenuItem>
+      <MenuItem value="/organization/all">全部團隊</MenuItem>
     </Select>
   )
 }
@@ -113,7 +113,7 @@ export function SearchGroup(props: { name: string }) {
   return (
     <TextField
       value={query || ''}
-      placeholder="搜索仓库：名称、ID"
+      placeholder="搜尋倉庫：名稱、ID"
       autoComplete="off"
       onChange={e => setQuery(e.target.value.trim())}
       onKeyUp={e => e.which === 13 && handleSearch()}
@@ -129,7 +129,7 @@ export function useHandleDelete() {
   const replaceLocation = useReplaceLocation()
   const dispatch = useDispatch()
   return (organization: any) => {
-    const message = `团队被删除后不可恢复！\n确认继续删除『#${organization.id} ${organization.name}』吗？`
+    const message = `團隊被刪除后不可回復！\n確認要繼續刪除「#${organization.id} ${organization.name}」嗎？`
     if (!window.confirm(message)) {
       return
     }
@@ -174,7 +174,7 @@ export function useHandleExit() {
   const dispatch = useDispatch()
 
   return (organization: any) => {
-    const message = `确认继续退出『#${organization.id} ${organization.name}』吗？`
+    const message = `確認要繼續退出「#${organization.id} ${organization.name}」嗎？`
     if (!window.confirm(message)) {
       return
     }

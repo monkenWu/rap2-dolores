@@ -13,8 +13,8 @@ class OrganizationList extends Component<any, any> {
     const { name, organizations } = this.props
     if (!organizations.length) {
       return name
-        ? <div className="fontsize-20 text-center p50">没有找到匹配 <strong>{name}</strong> 的团队</div>
-        : <div className="fontsize-20 text-center p50">没有数据</div>
+        ? <div className="fontsize-20 text-center p50">沒有找到相符 <strong>{name}</strong> 的團隊</div>
+        : <div className="fontsize-20 text-center p50">沒有資料</div>
     }
     return (
       <div className="OrganizationList row">
