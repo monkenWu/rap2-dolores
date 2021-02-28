@@ -30,7 +30,7 @@ class CopyToClipboard extends React.Component<Props, OwnState> {
             style={{ cursor: 'pointer', color: '#fff', padding: '8px 10px' }}
             onClick={() => this.onCopy(text)}
           >
-            复制
+            複製
           </div>
         }
         mouseLeaveDelay={0.4}
@@ -43,7 +43,7 @@ class CopyToClipboard extends React.Component<Props, OwnState> {
     ) : (
       <>
         {this.props.children}
-        <span className="copy-link edit" onClick={() => this.onCopy(text)} title="复制名称">
+        <span className="copy-link edit" onClick={() => this.onCopy(text)} title="複製名稱">
           <FileCopy fontSize="small"/>
         </span>
       </>
@@ -58,13 +58,13 @@ class CopyToClipboard extends React.Component<Props, OwnState> {
           content.length > maxLength
             ? content.substr(0, maxLength) + '...'
             : content
-        this.props.enqueueSnackbar(`成功复制 ${cutContent} 到剪贴板`, {
+        this.props.enqueueSnackbar(`成功複製 ${cutContent} 到剪貼簿`, {
           variant: 'success',
           autoHideDuration: 1000,
         })
       })
       .catch(() => {
-        this.props.enqueueSnackbar(`复制失败`, {
+        this.props.enqueueSnackbar(`複製失敗`, {
           variant: 'error',
           autoHideDuration: 1000,
         })

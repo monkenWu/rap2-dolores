@@ -37,7 +37,7 @@ class MembersInput extends Component<any, any> {
             <input
               className="dropdown-input"
               value={this.state.seed}
-              placeholder="花名或工号"
+              placeholder="花名或工號"
               autoComplete="off"
               onChange={e => this.handleSeed(e.target.value)}
               ref={$seed => { this.$seed = $seed }}

@@ -18,45 +18,45 @@ export default () => (
           <div className="flex-col flex-col-30">bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</div>
           <div className="flex-col flex-col-30">ccccccccccccccccccccccccccccccccccccc</div>
         </div>
-        <span>仓库1</span>
+        <span>儲存庫1</span>
         <RSortable group="depth-1.1">
           <ul>
             <li className="sortable p6" style={RandomBackground()}>
-              <span>模块1.1</span>
+              <span>模組1.1</span>
               <RSortable group="depth-1.2">
                 <ul>
-                  <li className="sortable p6" style={RandomBackground()}>接口1.1.1</li>
-                  <li className="sortable p6" style={RandomBackground()}>接口1.1.2</li>
-                  <li className="sortable p6" style={RandomBackground()}>接口1.1.3</li>
+                  <li className="sortable p6" style={RandomBackground()}>介面1.1.1</li>
+                  <li className="sortable p6" style={RandomBackground()}>介面1.1.2</li>
+                  <li className="sortable p6" style={RandomBackground()}>介面1.1.3</li>
                 </ul>
               </RSortable>
             </li>
-            <li className="sortable p6" style={RandomBackground()}>模块1.2</li>
-            <li className="sortable p6" style={RandomBackground()}>模块1.3</li>
+            <li className="sortable p6" style={RandomBackground()}>模組1.2</li>
+            <li className="sortable p6" style={RandomBackground()}>模組1.3</li>
           </ul>
         </RSortable>
       </li>
       <li className="sortable p6" style={RandomBackground()}>
-        <span>仓库2</span>
+        <span>儲存庫2</span>
         <RSortable group="depth-2.1">
           <ul>
             <li className="sortable p6" style={RandomBackground()}>
-              <span>模块2.1</span>
+              <span>模組2.1</span>
               <RSortable group="depth-2.2">
                 <ul>
-                  <li className="sortable p6" style={RandomBackground()}>接口2.1.1</li>
-                  <li className="sortable p6" style={RandomBackground()}>接口2.2.2</li>
-                  <li className="sortable p6" style={RandomBackground()}>接口2.2.3</li>
+                  <li className="sortable p6" style={RandomBackground()}>介面2.1.1</li>
+                  <li className="sortable p6" style={RandomBackground()}>介面2.2.2</li>
+                  <li className="sortable p6" style={RandomBackground()}>介面2.2.3</li>
                 </ul>
               </RSortable>
             </li>
-            <li className="sortable p6" style={RandomBackground()}>模块2.2</li>
-            <li className="sortable p6" style={RandomBackground()}>模块2.3</li>
+            <li className="sortable p6" style={RandomBackground()}>模組2.2</li>
+            <li className="sortable p6" style={RandomBackground()}>模組2.3</li>
           </ul>
         </RSortable>
       </li>
-      <li className="sortable p6" style={RandomBackground()}>团队</li>
-      <li className="sortable p6" style={RandomBackground()}>用户</li>
+      <li className="sortable p6" style={RandomBackground()}>團隊</li>
+      <li className="sortable p6" style={RandomBackground()}>用戶</li>
     </ul>
   </RSortable>
 )

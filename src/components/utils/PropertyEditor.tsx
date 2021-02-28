@@ -67,7 +67,7 @@ class StringRuleEditor extends Component<any, any> {
       case '|min-max':
         return { [`name|${this.state.min}-${this.state.max}`]: `${this.state.value}` }
       default:
-        console.warn('错误的生成规则')
+        console.warn('錯誤的產生規則')
     }
     return''
   }
@@ -78,34 +78,34 @@ class StringRuleEditor extends Component<any, any> {
           <thead>
             <tr>
               <td>-</td>
-              <td>生成规则</td>
+              <td>產生規則</td>
               <td>-</td>
               <td>初始值</td>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>字符串</td>
+              <td>字串</td>
               <td>
                 <select value={this.state.rule} onChange={e => this.setState({ rule: e.target.value })} className="rule">
                   <option value="">固定值</option>
-                  <option value="|count">重复固定次数</option>
-                  <option value="|min-max">重复随机次数</option>
+                  <option value="|count">重複固定次數</option>
+                  <option value="|min-max">重複隨機次數</option>
                 </select>
               </td>
               <td>
                 {this.state.rule === '|count' &&
                   <span>
-                    <span>重复</span>
+                    <span>重複</span>
                     <input value={this.state.count} onChange={e => this.setState({ count: e.target.value })} className="count" />
                     <span>次</span>
                   </span>
                 }
                 {this.state.rule === '|min-max' &&
                   <span>
-                    <span>重复次数</span>
-                    <div>大于等于 <input value={this.state.min} onChange={e => this.setState({ min: e.target.value })} className="min" /></div>
-                    <div>小于等于 <input value={this.state.max} onChange={e => this.setState({ max: e.target.value })} className="max" /></div>
+                    <span>重複次數</span>
+                    <div>大於等於 <input value={this.state.min} onChange={e => this.setState({ min: e.target.value })} className="min" /></div>
+                    <div>小於等於 <input value={this.state.max} onChange={e => this.setState({ max: e.target.value })} className="max" /></div>
                   </span>
                 }
               </td>
@@ -141,17 +141,17 @@ class IntegerRuleEditor extends Component<any, any> {
       case '|min-max':
         return { [`name|${this.state.min}-${this.state.max}`]: 1 }
       default:
-        console.warn('错误的生成规则')
+        console.warn('錯誤的產生規則')
     }
     return ''
   }
   render() {
     return (
       <section className="RuleEditor">
-        <span>整数</span>
+        <span>整數</span>
         <select value={this.state.type} onChange={e => this.setState({ type: e.target.value })} className="type">
           <option value="">固定值</option>
-          <option value="|min-max">随机值</option>
+          <option value="|min-max">隨機值</option>
         </select>
         <div>
           {this.state.type === ''
@@ -161,9 +161,9 @@ class IntegerRuleEditor extends Component<any, any> {
             : null}
           {this.state.type === '|min-max'
             ? <span>
-              <span>大于等于</span>
+              <span>大於等於</span>
               <input value={this.state.min} onChange={e => this.setState({ min: e.target.value })} className="min" />
-              <span>，小于等于</span>
+              <span>，小於等於</span>
               <input value={this.state.max} onChange={e => this.setState({ max: e.target.value })} className="max" />
             </span>
             : null}
@@ -199,17 +199,17 @@ class FloatRuleEditor extends Component<any, any> {
       case '|min-max.dmin-dmax':
         return { [`name|${this.state.min}-${this.state.max}.${this.state.dmin}-${this.state.dmax}`]: 1 }
       default:
-        console.warn('错误的生成规则')
+        console.warn('錯誤的產生規則')
     }
     return ''
   }
   render() {
     return (
       <section className="RuleEditor">
-        <span>浮点数</span>
+        <span>浮點數</span>
         <select value={this.state.type} onChange={e => this.setState({ type: e.target.value })} className="type">
           <option value="">固定值</option>
-          <option value="|min-max.dmin-dmax">随机值</option>
+          <option value="|min-max.dmin-dmax">隨機值</option>
         </select>
         <div>
           {this.state.type === ''
@@ -219,12 +219,12 @@ class FloatRuleEditor extends Component<any, any> {
             : null}
           {this.state.type === '|min-max.dmin-dmax'
             ? <span>
-              <span>整数部分</span>
-              <span>大于等于</span>
+              <span>整數部分</span>
+              <span>大於等於</span>
               <input value={this.state.min} onChange={e => this.setState({ min: e.target.value })} className="min" />
-              <span>，小于等于</span>
+              <span>，小於等於</span>
               <input value={this.state.max} onChange={e => this.setState({ max: e.target.value })} className="max" />
-              <span>，小数部分保留</span>
+              <span>，保留小數部分</span>
               <input value={this.state.dmin} onChange={e => this.setState({ dmin: e.target.value })} className="min" />
               <span>到</span>
               <input value={this.state.dmax} onChange={e => this.setState({ dmax: e.target.value })} className="max" />
@@ -269,11 +269,11 @@ class PropertyEditor extends Component<any, any> {
         </div>
         <div className="col-6">
           <div className="form-group">
-            <label className="control-label">属性名：</label>
+            <label className="control-label">屬性名稱：</label>
             <input type="text" value={this.state.name} onChange={e => this.setState({ name: e.target.value })} className="form-control" />
           </div>
           <div className="form-group">
-            <label className="control-label">类型：</label>
+            <label className="control-label">類型：</label>
             <select
               name="type"
               value={this.state.type}
@@ -292,7 +292,7 @@ class PropertyEditor extends Component<any, any> {
             </select>
           </div>
           <div className="form-group">
-            <label className="control-label">生成规则：</label>
+            <label className="control-label">產生規則：</label>
             <input type="text" value={this.state.rule} onChange={e => this.setState({ rule: e.target.value })} className="form-control" />
           </div>
           <div className="form-group">

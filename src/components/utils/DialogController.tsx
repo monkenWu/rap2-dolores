@@ -23,7 +23,7 @@ class DialogController extends Component<
       onResolved()
       return
     }
-    console.warn('警告：Dialog 的回调应该放到调用组件中！')
+    console.warn('警告：Dialog 的回呼應該放到呼叫的組件中！')
     const { history, location } = this.context
     history.push(location.pathname + location.search + location.hash)
   }

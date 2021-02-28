@@ -4,7 +4,7 @@ import './Spin.css'
 export default () => (
   <section className="Spin">
     <div className="three-bounce">
-      拼命加载中...(*╹▽╹*)
+      拼命載入中... (*╹▽╹*)
     </div>
   </section>
 )

@@ -25,7 +25,7 @@ class Example extends Component<any, any> {
         <TagsInput
           value={this.state.members}
           options={this.state.options}
-          placeholder={'名字检索'}
+          placeholder={'名字檢索'}
           onSeed={this.handleSeed}
           onChange={this.handleChange}
         />

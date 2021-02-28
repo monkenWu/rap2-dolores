@@ -34,7 +34,7 @@ export const Pagination = ({ location, url = '', calculated, total, cursor = 1, 
   return (
     <nav className="Pagination clearfix">
       <div className="summary">
-        <span>{`当前第 ${paging.start + 1} - ${paging.end} 条，共 ${paging.total} 条，每页展现 ${paging.limit} 条`}</span>
+        <span>{`目前第 ${paging.start + 1} - ${paging.end} 條，共 ${paging.total} 條，每頁展現 ${paging.limit} 條`}</span>
       </div>
       <ul className="page-list">
         <li className={paging.hasPrev ? 'page-item' : 'page-item-disabled'}>
