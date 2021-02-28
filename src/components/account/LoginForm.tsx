@@ -75,7 +75,7 @@ export default function LoginForm() {
   const handleSubmit = (e?: any) => {
     e && e.preventDefault()
     if (!email || !password || !captcha) {
-      dispatch(showMessage(`请输入账号、密码、验证码`, MSG_TYPE.WARNING))
+      dispatch(showMessage(`請輸入帳號、密碼、驗證碼`, MSG_TYPE.WARNING))
     } else {
       dispatch(
         login({ email, password, captcha }, () => {
@@ -100,7 +100,7 @@ export default function LoginForm() {
           </ListItem>
           <ListItem>
             <FormControl fullWidth={true}>
-              <InputLabel htmlFor="email">邮箱</InputLabel>
+              <InputLabel htmlFor="email">信箱</InputLabel>
               <Input
                 tabIndex={0}
                 value={email}
@@ -119,7 +119,7 @@ export default function LoginForm() {
           </ListItem>
           <ListItem>
             <FormControl fullWidth={true}>
-              <InputLabel htmlFor="password">密码</InputLabel>
+              <InputLabel htmlFor="password">密碼</InputLabel>
               <Input
                 tabIndex={1}
                 name="password"
@@ -141,7 +141,7 @@ export default function LoginForm() {
           </ListItem>
           <ListItem>
             <FormControl fullWidth={true}>
-              <InputLabel htmlFor="captcha">验证码</InputLabel>
+              <InputLabel htmlFor="captcha">驗證碼</InputLabel>
               <Input
                 tabIndex={2}
                 name="captcha"
@@ -166,11 +166,11 @@ export default function LoginForm() {
             </div>
             <div className={classes.buttonWrapper}>
               <Button variant="outlined" color="default" style={{ marginRight: 8 }} onClick={() => dispatch(push('/account/register'))}>注册</Button>
-              <Button variant="contained" color="primary" tabIndex={3} onClick={handleSubmit}>登录</Button>
+              <Button variant="contained" color="primary" tabIndex={3} onClick={handleSubmit}>登入</Button>
             </div>
           </ListItem>
           <ListItem className={classes.ctlend}>
-            <Link to="#" onClick={() => dispatch(push('/account/findpwd'))} className="operation ">忘记密码？</Link>
+            <Link to="#" onClick={() => dispatch(push('/account/findpwd'))} className="operation ">忘記密碼？</Link>
           </ListItem>
         </List>
       </Paper>

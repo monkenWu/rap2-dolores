@@ -10,7 +10,7 @@ import { RootState } from 'actions/types'
 const UserList = ({ match, location, users, onDeleteUser }: any) => (
   <section className="UserList">
     <div className="header">
-      <span className="title">用户管理</span>
+      <span className="title">用戶管理</span>
     </div>
     <nav className="toolbar clearfix">
       {/* <div className='float-left'>
@@ -25,7 +25,7 @@ const UserList = ({ match, location, users, onDeleteUser }: any) => (
         <thead>
           <tr>
             <th>姓名</th>
-            <th>邮箱</th>
+            <th>信箱</th>
             <th className="w100">操作</th>
           </tr>
         </thead>
@@ -38,7 +38,7 @@ const UserList = ({ match, location, users, onDeleteUser }: any) => (
               <td>{user.email}</td>
               <td>
                 <span style={{ cursor: 'not-allowed' }}>
-                  <Link to={match.url} onClick={() => onDeleteUser(user.id)} className="operation disabled">删除</Link>
+                  <Link to={match.url} onClick={() => onDeleteUser(user.id)} className="operation disabled">刪除</Link>
                 </span>
               </td>
             </tr>

@@ -51,16 +51,16 @@ function MyAccountView() {
               {me.fullname}
             </Typography>
             <Typography component="p">
-              这个家伙很懒还没有写签名....我们也不支持 。。。
+              這個傢伙很懶還沒有寫簽名.... 我們也不支援，這很糟耶
             </Typography>
             <Typography gutterBottom={true} variant="subtitle1" component="h6" className={classes.title} >
-              昵称
+              昵稱
           </Typography>
             <Typography component="p">
               {me.fullname}
             </Typography>
             <Typography gutterBottom={true} variant="subtitle1" component="h6" className={classes.title} >
-              账号 / 邮箱
+              帳號 / 信箱
           </Typography>
             <Typography component="p">
               {me.email}
@@ -68,8 +68,8 @@ function MyAccountView() {
           </CardContent>
         </CardActionArea>
         <CardActions>
-          <Button size="small" color="primary" onClick={() => setEditing(true)}>修改资料</Button>
-          <Button size="small" color="primary" onClick={() => dispatch(logout())}>退出登陆</Button>
+          <Button size="small" color="primary" onClick={() => setEditing(true)}>修改資料</Button>
+          <Button size="small" color="primary" onClick={() => dispatch(logout())}>退出登入</Button>
         </CardActions>
       </Card>
       {editing && <EditMyAccountDialog handleClose={onEditSubmit} />}

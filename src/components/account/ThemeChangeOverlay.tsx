@@ -76,9 +76,9 @@ function ThemeChangeOverlay(props: Props) {
   return (
     <div>
       <Dialog open={open} onClose={() => handleClose()} aria-labelledby="form-dialog-title">
-        <DialogTitle id="form-dialog-title">换肤</DialogTitle>
+        <DialogTitle id="form-dialog-title">更換設計</DialogTitle>
         <DialogContent>
-          <DialogContentText> 请选择喜爱的皮肤 </DialogContentText>
+          <DialogContentText> 請選擇喜愛的介面設計 </DialogContentText>
           <div className={classes.themeOptionList}>
             {THEME_TEMPLATE_KEY_LIST.map(key => ({ ...THEME_TEMPLATES[key], key })).map(template =>
               <ThemeTemplateOption
@@ -96,7 +96,7 @@ function ThemeChangeOverlay(props: Props) {
             取消
           </Button>
           <Button onClick={() => handleClose(themeId)} color="primary">
-            确定
+            確定
           </Button>
         </DialogActions>
       </Dialog>

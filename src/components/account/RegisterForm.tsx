@@ -47,7 +47,7 @@ class RegisterForm extends Component<Props, State> {
       <div className="wrapper" style={{ background: this.state.bg }}>
         <Card className="RegisterForm">
           <div className="header">
-            <span className="title">注册</span>
+            <span className="title">註冊</span>
           </div>
           <form className="body" onSubmit={this.handleSubmit}>
             <div className="form-group">
@@ -62,7 +62,7 @@ class RegisterForm extends Component<Props, State> {
               />
             </div>
             <div className="form-group">
-              <label>邮箱：</label>
+              <label>信箱：</label>
               <input
                 value={this.state.email}
                 onChange={e => this.setState({ email: e.target.value })}
@@ -72,7 +72,7 @@ class RegisterForm extends Component<Props, State> {
               />
             </div>
             <div className="form-group">
-              <label>密码：</label>
+              <label>密碼：</label>
               <input
                 value={this.state.password}
                 onChange={e => this.setState({ password: e.target.value })}

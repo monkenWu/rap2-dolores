@@ -70,13 +70,13 @@ export default function ResetpwdForm() {
   const handleSubmit = (e?: any) => {
     e && e.preventDefault()
     if (!password) {
-      dispatch(showMessage(`请输入密码`, MSG_TYPE.WARNING))
+      dispatch(showMessage(`請輸入密碼`, MSG_TYPE.WARNING))
     } else if (password.length < 6) {
-      dispatch(showMessage(`密码长度过短，请输入六位以上密码`, MSG_TYPE.WARNING))
+      dispatch(showMessage(`密碼長度過短，請輸入六位以上密碼`, MSG_TYPE.WARNING))
     } else {
       dispatch(
         resetpwd({ email, code, token, password, captcha }, () => {
-          dispatch(showMessage(`密码重置成功，请重新登录`, MSG_TYPE.SUCCESS))
+          dispatch(showMessage(`密碼重置成功，請重新登入`, MSG_TYPE.SUCCESS))
           dispatch(push('/'))
         })
       )
@@ -88,14 +88,14 @@ export default function ResetpwdForm() {
       <Paper className={classes.container}>
         <List>
         <ListItem>
-            <h2>为您的账号重置密码</h2>
+            <h2>為您的帳號重置密碼</h2>
           </ListItem>
           <ListItem>
           {email}
           </ListItem>
           <ListItem>
             <FormControl fullWidth={true}>
-              <InputLabel htmlFor="password">重置密码</InputLabel>
+              <InputLabel htmlFor="password">重置密碼</InputLabel>
               <Input
                 tabIndex={1}
                 name="password"
@@ -117,7 +117,7 @@ export default function ResetpwdForm() {
           </ListItem>
           <ListItem>
             <FormControl fullWidth={true}>
-              <InputLabel htmlFor="captcha">验证码</InputLabel>
+              <InputLabel htmlFor="captcha">驗證碼</InputLabel>
               <Input
                 tabIndex={2}
                 name="captcha"
@@ -142,7 +142,7 @@ export default function ResetpwdForm() {
             </div>
             <div className={classes.buttonWrapper}>
               <Button variant="outlined" color="default" style={{ marginRight: 8 }} onClick={() => dispatch(push('/account/login'))}>取消</Button>
-              <Button variant="contained" color="primary" tabIndex={3} onClick={handleSubmit}>重置密码</Button>
+              <Button variant="contained" color="primary" tabIndex={3} onClick={handleSubmit}>重置密碼</Button>
             </div>
           </ListItem>
         </List>

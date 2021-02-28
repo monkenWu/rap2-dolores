@@ -59,11 +59,11 @@ export default function FindpwdForm() {
   const handleSubmit = (e?: any) => {
     e && e.preventDefault()
     if (!email || !captcha) {
-      dispatch(showMessage(`请输入Email、验证码`, MSG_TYPE.WARNING))
+      dispatch(showMessage(`請輸入Email、驗證碼`, MSG_TYPE.WARNING))
     } else {
       dispatch(
         findpwd({ email, captcha }, () => {
-          dispatch(showMessage(`发送成功，请登录您的邮箱按提示重置密码`, MSG_TYPE.SUCCESS))
+          dispatch(showMessage(`傳送成功，請登入您的信箱按提示重置密碼`, MSG_TYPE.SUCCESS))
         })
       )
     }
@@ -74,11 +74,11 @@ export default function FindpwdForm() {
       <Paper className={classes.container}>
         <List>
           <ListItem>
-            <h2>发送重设密码邮件</h2>
+            <h2>傳送重設密碼郵件</h2>
           </ListItem>
           <ListItem>
             <FormControl fullWidth={true}>
-              <InputLabel htmlFor="email">邮箱</InputLabel>
+              <InputLabel htmlFor="email">郵件</InputLabel>
               <Input
                 tabIndex={0}
                 value={email}
@@ -97,7 +97,7 @@ export default function FindpwdForm() {
           </ListItem>
           <ListItem>
             <FormControl fullWidth={true}>
-              <InputLabel htmlFor="captcha">验证码</InputLabel>
+              <InputLabel htmlFor="captcha">驗證碼</InputLabel>
               <Input
                 tabIndex={2}
                 name="captcha"

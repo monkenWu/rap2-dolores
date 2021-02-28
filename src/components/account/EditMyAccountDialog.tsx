@@ -18,12 +18,12 @@ function EditMyAccountDialog({ handleClose }: { handleClose: (isOk: boolean) => 
   }
   return (
     <Dialog open={true} onClose={() => handleClose(false)} style={{ width: 600 }}>
-      <DialogTitle>修改资料</DialogTitle>
+      <DialogTitle>修改資料</DialogTitle>
       <DialogContent>
         <TextField
           autoFocus={true}
           margin="dense"
-          label="修改密码"
+          label="修改密碼"
           type="password"
           fullWidth={true}
           placeholder="不修改留空即可"
@@ -33,7 +33,7 @@ function EditMyAccountDialog({ handleClose }: { handleClose: (isOk: boolean) => 
         <TextField
           autoFocus={true}
           margin="dense"
-          label="修改昵称"
+          label="修改暱稱"
           fullWidth={true}
           placeholder="不修改留空即可"
           onChange={e => setName(e.target.value)}
@@ -48,7 +48,7 @@ function EditMyAccountDialog({ handleClose }: { handleClose: (isOk: boolean) => 
           color="primary"
           onClick={onSubmit}
         >
-          确认
+          確定
       </Button>
       </DialogActions>
     </Dialog>
