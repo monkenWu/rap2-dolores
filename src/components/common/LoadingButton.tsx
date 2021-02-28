@@ -31,7 +31,7 @@ export default React.forwardRef((props: Props, ref: any) => {
   return (
     <div className={classes.root} ref={ref}>
       <Button {...rest}>
-        {loading ? '处理中...' : label}
+        {loading ? '處理中...' : label}
         {children}
       </Button>
       {loading && <CircularProgress size={24} className={classes.buttonProgress} />}

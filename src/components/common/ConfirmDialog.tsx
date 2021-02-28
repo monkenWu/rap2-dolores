@@ -15,7 +15,7 @@ interface Props {
   onCancel: () => void
 }
 export default function ConfirmDialog(props: Props) {
-  const { type, title = '确认' } = props
+  const { type, title = '確定' } = props
   return (
     <Dialog open={props.open} onClose={props.onCancel} TransitionComponent={SlideUp}>
       <DialogTitle>{title}</DialogTitle>
@@ -29,7 +29,7 @@ export default function ConfirmDialog(props: Props) {
           </Button>
         )}
         <Button onClick={props.onConfirm} variant="outlined" color="primary" autoFocus={true}>
-          确定
+          確定
         </Button>
       </DialogActions>
     </Dialog>

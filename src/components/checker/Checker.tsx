@@ -34,7 +34,7 @@ class Checker extends Component<CheckerProps, CheckerState> {
     return (
       <section className="Checker">
         <div className="card-mods clearfix">
-          <span className="card-title">模块：</span>
+          <span className="card-title">模組：</span>
           {repository.modules.map((item: any) => (
             <Link key={item.id} to="" onClick={e => this.switchMod(e, item)} className={item.id === mod.id ? 'active' : ''}>
               {item.name}
@@ -42,7 +42,7 @@ class Checker extends Component<CheckerProps, CheckerState> {
           ))}
         </div>
         <div className="card-itfs clearfix">
-          <span className="card-title">接口：</span>
+          <span className="card-title">介面：</span>
           {mod.interfaces.map((item: any) => (
             <Link key={item.id} to="" onClick={e => this.switchItf(e, item)} className={item.id === itf.id ? 'active' : ''}>
               {item.name}

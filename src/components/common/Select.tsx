@@ -210,10 +210,10 @@ function MaterialSelect(props: Props) {
     isMulti: isMulti,
     isClearable,
     noOptionsMessage: ({ inputValue }: { inputValue: string }) => {
-      return inputValue && inputValue.trim() ? '搜不到数据' : '请输入检索关键字'
+      return inputValue && inputValue.trim() ? '搜索不到資料' : '請輸入檢索關鍵字'
     },
     onChange,
-    placeholder: `请选择(${isMulti ? '多选' : '单选'})`,
+    placeholder: `請選擇(${isMulti ? '多選' : '單選'})`,
   }
 
   if (value) {
