@@ -19,7 +19,7 @@ const mockResult =
 
 /** MockJS 的 toJSONSchema 的 bug 会导致有 length 属性的对象被识别成数组
  *  众所周知 MockJS 已经不维护了，所以只能自己想想办法
- *  先递归把 length 替换成其他的名称，生成 schema 后再换回来
+ *  先递归把 length 替换成其他的名称，建構 schema 后再换回来
  */
 const lengthAlias = '__mockjs_length_*#06#'
 

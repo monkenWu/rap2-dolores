@@ -76,10 +76,10 @@ function Readme() {
       </div>
 
       <h2>Rapper 是什麼？</h2>
-      <p>Rapper 是 TypeScript 的最佳拍檔，它可以幫你生成具有類型定義的請求方案。</p>
+      <p>Rapper 是 TypeScript 的最佳拍檔，它可以幫你建構具有類型定義的請求方案。</p>
       <ul>
         <li>無需自行書寫請求代碼，把 HTTP 介面當做函式呼叫</li>
-        <li>請求參數/返回數據類型化，靜態校驗、自動完成快到飛起</li>
+        <li>請求參數/回應資料類型化，靜態校驗、自動完成快到飛起</li>
         <li>對 React/Redux 特別最佳化，提供全域資料方案，hooks 輕鬆使用</li>
       </ul>
       <p>
@@ -152,7 +152,7 @@ function RapperInstallerModal({
   /** rapper 类型 normal redux */
   const [rapperType, setRapperType] = useState<RapperType>('normal')
 
-  /** rapper 生成目录地址 */
+  /** rapper 建構目录地址 */
   const [rapperPath, setRapperPath] = useState<string>('src/rapper')
 
   function handleRapperTypeChange(_event: React.ChangeEvent<HTMLInputElement>, value: RapperType) {
@@ -177,7 +177,7 @@ function RapperInstallerModal({
             <CloseIcon />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            嘗試用 Rapper 幫你生成代碼
+            嘗試用 Rapper 幫你建構代碼
           </Typography>
         </Toolbar>
       </AppBar>
@@ -185,7 +185,7 @@ function RapperInstallerModal({
         <Readme />
         <div className={classes.formItem}>
           <FormLabel component="legend" className={classes.formLabel}>
-            產生程式碼的模式
+            建構程式碼的模式
             <a href="https://www.yuque.com/rap/rapper/which-model" className={classes.mode} target="_blank" rel="noopener noreferrer">我該選擇哪種模式？</a>
           </FormLabel>
           <RadioGroup aria-label="rapperType" row={true} name="rapperType" value={rapperType} onChange={handleRapperTypeChange}>
@@ -194,7 +194,7 @@ function RapperInstallerModal({
           </RadioGroup>
         </div>
         <div className={classes.formItem}>
-          <FormLabel component="legend" className={classes.formLabel}>Rapper 產生檔案的目錄（相對於專案根目錄）</FormLabel>
+          <FormLabel component="legend" className={classes.formLabel}>Rapper 建構檔案的目錄（相對於專案根目錄）</FormLabel>
           <TextField
             placeholder="src/rapper"
             fullWidth={true}
@@ -210,7 +210,7 @@ function RapperInstallerModal({
         <pre>
           {codeTmpl({ projectId: repository.id, token: repository.token, rapperType, rapperPath })}
         </pre>
-        <p className={classes.step}>3. 運作 rapper 產生程式碼</p>
+        <p className={classes.step}>3. 運作 rapper 建構程式碼</p>
         <pre>
           npm run rapper
         </pre>

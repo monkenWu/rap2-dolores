@@ -67,7 +67,7 @@ interface Props {
 export enum IMPORT_TYPE {
   /** 从Swagger 2.0 URL 或 JSON 文件导入 */
   SWAGGER_2_0 = 1,
-  /** 从RAP2改动时系统生成的备份JSON文件导入 */
+  /** 从RAP2改动时系统建構的备份JSON文件导入 */
   RAP2_ITF_BACKUP = 2,
 }
 

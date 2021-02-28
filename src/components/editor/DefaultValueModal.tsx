@@ -104,7 +104,7 @@ function DefaultValueModal({ open, handleClose, repositoryId, enqueueSnackbar }:
       </AppBar>
       <DialogContent>
         <div className={classes.topHint}>
-          <Typography variant="body1"> 系統將根據變數名進行搜索，如果產生規則和初始值均未填寫，系統才會對同名參數的 Mock 規則進行覆蓋。</Typography>
+          <Typography variant="body1"> 系統將根據變數名進行搜索，如果建構規則和初始值均未填寫，系統才會對同名參數的 Mock 規則進行覆蓋。</Typography>
         </div>
         <div className={classes.btn}>
           <Button onClick={addNewLine} color="primary" variant="contained" size="small">新增一行</Button>
@@ -113,7 +113,7 @@ function DefaultValueModal({ open, handleClose, repositoryId, enqueueSnackbar }:
           <TableHead>
             <TableRow>
               <TableCell>變數名</TableCell>
-              <TableCell>產生規則</TableCell>
+              <TableCell>建構規則</TableCell>
               <TableCell>初始值</TableCell>
               <TableCell />
             </TableRow>
@@ -132,7 +132,7 @@ function DefaultValueModal({ open, handleClose, repositoryId, enqueueSnackbar }:
                   <TextField
                     value={row.rule}
                     onChange={e => onChange('rule', i, e.target.value)}
-                    placeholder="請輸入產生規則"
+                    placeholder="請輸入建構規則"
                   />
                 </TableCell>
                 <TableCell>

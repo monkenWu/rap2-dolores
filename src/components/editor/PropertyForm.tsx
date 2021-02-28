@@ -97,7 +97,7 @@ class PropertyForm extends Component<any, any> {
               </div>
             </div>
             <div className="form-group row">
-              <label className="col-sm-2 control-label">產生規則：</label>
+              <label className="col-sm-2 control-label">建構規則：</label>
               <div className="col-sm-10">
                 <input
                   name="rule"

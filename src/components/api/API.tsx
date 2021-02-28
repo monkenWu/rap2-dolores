@@ -21,7 +21,7 @@ const ExampleJQuery = () => (
         '    method : \'GET\',\n' +
         '    dataType : \'JSON\',\n' +
         '    success : function(data) {\n' +
-        '      // 返回根據 RAP 文件及規則產生的 mock 數據\n' +
+        '      // 返回根據 RAP 文件及規則建構的 mock 資料\n' +
         '      $(\'#result\').html(JSON.stringify(data))\n' +
         '    }\n' +
         '})\n'
@@ -50,7 +50,7 @@ class API extends React.Component<Props, State> {
     return (
       <Paper className="APIList">
         <div className="header">
-          <span className="title">用戶文件</span>
+          <span className="title">使用者文件</span>
         </div>
         <div className="body">
           <div className="API">

@@ -46,7 +46,7 @@ class Status extends Component<any, any> {
     }))
     const dict = [
       ['版本', counter.version, ''],
-      ['用戶', users.pagination.total, '人'],
+      ['使用者', users.pagination.total, '人'],
       ['模擬', counter.mock, '次'],
       ['團隊', organizations.pagination.total, '個'],
       ['儲存庫', repositories.pagination.total, '個'],
@@ -81,7 +81,7 @@ class Status extends Component<any, any> {
               <RChart type="line" data={this.adapt(analyticsRepositoriesUpdated, '活躍儲存庫數')} options={{}} />
             </Card>
             <Card className="chart">
-              <div className="header"><span className="title">最近 30 天活躍用戶排行</span></div>
+              <div className="header"><span className="title">最近 30 天活躍使用者排行</span></div>
               <RChart type="horizontalBar" data={this.adapt(analyticsUsersActivation, '操作')} options={{}} />
             </Card>
             <Card className="chart">

@@ -100,7 +100,7 @@ class Previewer extends Component<any, any> {
           </div>
           <div className="result-mocked">
             <div className="header">
-              <span className="title">{label}數據</span>
+              <span className="title">{label}資料</span>
               {scope === 'response' ? (
                 <a
                   href={`${serve}/app/mock/data/${interfaceId}`}
@@ -129,7 +129,7 @@ class Previewer extends Component<any, any> {
               ) : (
                 <span>
                   <GoBug className="mr6 fontsize-20" />
-                  模板與數據不相符
+                  模板與資料不相符
                 </span>
               )}
             </div>

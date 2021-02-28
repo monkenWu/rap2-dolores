@@ -9,7 +9,7 @@
     * RegExp
     * Object
     * Array
-  3. 生成规则
+  3. 建構规则
   4. 初始值
 */
 
@@ -67,7 +67,7 @@ class StringRuleEditor extends Component<any, any> {
       case '|min-max':
         return { [`name|${this.state.min}-${this.state.max}`]: `${this.state.value}` }
       default:
-        console.warn('錯誤的產生規則')
+        console.warn('錯誤的建構規則')
     }
     return''
   }
@@ -78,7 +78,7 @@ class StringRuleEditor extends Component<any, any> {
           <thead>
             <tr>
               <td>-</td>
-              <td>產生規則</td>
+              <td>建構規則</td>
               <td>-</td>
               <td>初始值</td>
             </tr>
@@ -141,7 +141,7 @@ class IntegerRuleEditor extends Component<any, any> {
       case '|min-max':
         return { [`name|${this.state.min}-${this.state.max}`]: 1 }
       default:
-        console.warn('錯誤的產生規則')
+        console.warn('錯誤的建構規則')
     }
     return ''
   }
@@ -199,7 +199,7 @@ class FloatRuleEditor extends Component<any, any> {
       case '|min-max.dmin-dmax':
         return { [`name|${this.state.min}-${this.state.max}.${this.state.dmin}-${this.state.dmax}`]: 1 }
       default:
-        console.warn('錯誤的產生規則')
+        console.warn('錯誤的建構規則')
     }
     return ''
   }
@@ -292,7 +292,7 @@ class PropertyEditor extends Component<any, any> {
             </select>
           </div>
           <div className="form-group">
-            <label className="control-label">產生規則：</label>
+            <label className="control-label">建構規則：</label>
             <input type="text" value={this.state.rule} onChange={e => this.setState({ rule: e.target.value })} className="form-control" />
           </div>
           <div className="form-group">

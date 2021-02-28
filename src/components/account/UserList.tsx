@@ -10,7 +10,7 @@ import { RootState } from 'actions/types'
 const UserList = ({ match, location, users, onDeleteUser }: any) => (
   <section className="UserList">
     <div className="header">
-      <span className="title">用戶管理</span>
+      <span className="title">使用者管理</span>
     </div>
     <nav className="toolbar clearfix">
       {/* <div className='float-left'>

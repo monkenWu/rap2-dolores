@@ -56,7 +56,7 @@ export default () => (
         </RSortable>
       </li>
       <li className="sortable p6" style={RandomBackground()}>團隊</li>
-      <li className="sortable p6" style={RandomBackground()}>用戶</li>
+      <li className="sortable p6" style={RandomBackground()}>使用者</li>
     </ul>
   </RSortable>
 )

@@ -85,7 +85,7 @@ class SortableTreeTableHeader extends Component<any, any> {
           <div className="th type">類型</div>
           {/* TODO 2.3 规则编辑器 */}
           <div className="th rule">
-            產生規則
+            建構規則
             <a
               href="https://github.com/nuysoft/Mock/wiki/Syntax-Specification"
               rel="noopener noreferrer"

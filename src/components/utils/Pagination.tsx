@@ -127,7 +127,7 @@ export default Pagination
         setLimit(limit)     设置分页大小
         get(focus)          获取一条数据
         toString()          友好打印
-        toHTML(url)         生成分页栏
+        toHTML(url)         建構分页栏
 
 */
 /*
