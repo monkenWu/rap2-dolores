@@ -12,8 +12,8 @@ class RepositoryList extends Component<any, any> {
     const { name, repositories, editor } = this.props
     if (!repositories.length) {
       return name
-        ? <div className="fontsize-20 text-center p50">没有找到匹配 <strong>{name}</strong> 的仓库</div>
-        : <div className="fontsize-20 text-center p50">没有数据</div>
+        ? <div className="fontsize-20 text-center p50">沒有找到符合 <strong>{name}</strong> 的儲存庫</div>
+        : <div className="fontsize-20 text-center p50">沒有資料</div>
     }
     return (
       <div className="RepositoryList row">

@@ -42,7 +42,7 @@ export default function ExportPostmanForm(props: {
                 {postmanLink}
               </a>
             </div>
-            <div>点击以上链接下载，在 Postman 中点击导入（Import），选择从文件导入（Import File）下载的文件。</div>
+            <div>點擊以上連結下載，在 Postman 中點擊匯入（Import），選擇從文件導入（Import File）下載的檔案。</div>
           </div>
 
           <div>
@@ -78,12 +78,12 @@ export default function ExportPostmanForm(props: {
             >
               <a href={rapLink} target="_blank" rel="noopener noreferrer">{rapLink}</a>
             </div>
-            <div>用于备份，或在其它RAP2平台导入，打开后另存为保存即可。也可通过编程访问。</div>
+            <div>用於備份，或在其它RAP2平台匯入，打開後另存新檔即可。 也可通過程式設計存取。</div>
           </div>
 
           <div className="mt10">
             <Button variant="outlined" onClick={onClose}>
-              关闭
+              關閉
             </Button>
           </div>
         </form>

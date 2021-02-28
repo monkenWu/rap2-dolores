@@ -46,15 +46,15 @@ class Status extends Component<any, any> {
     }))
     const dict = [
       ['版本', counter.version, ''],
-      ['用户', users.pagination.total, '人'],
-      ['模拟', counter.mock, '次'],
-      ['团队', organizations.pagination.total, '个'],
-      ['仓库', repositories.pagination.total, '个'],
-      ['接口', interfaces.pagination.total, '个'],
+      ['用戶', users.pagination.total, '人'],
+      ['模擬', counter.mock, '次'],
+      ['團隊', organizations.pagination.total, '個'],
+      ['儲存庫', repositories.pagination.total, '個'],
+      ['介面', interfaces.pagination.total, '個'],
     ]
     return (
       <article className="Status">
-        {/* <div className='header'><span className='title'>分析和报告</span></div> */}
+        {/* <div className='header'><span className='title'>分析和報告</span></div> */}
         <div className="body">
           <div className="row mb20">
             {dict.map(([name, value, unit]) =>
@@ -73,19 +73,19 @@ class Status extends Component<any, any> {
           </div>
           <div className="row">
             <Card className="chart">
-              <div className="header"><span className="title">最近 30 天新建仓库数</span></div>
-              <RChart type="line" data={this.adapt(analyticsRepositoriesCreated, '新建仓库数')} options={{}} />
+              <div className="header"><span className="title">最近 30 天新建儲存庫數</span></div>
+              <RChart type="line" data={this.adapt(analyticsRepositoriesCreated, '新建儲存庫數')} options={{}} />
             </Card>
             <Card className="chart">
-              <div className="header"><span className="title">最近 30 天活跃仓库数</span></div>
-              <RChart type="line" data={this.adapt(analyticsRepositoriesUpdated, '活跃仓库数')} options={{}} />
+              <div className="header"><span className="title">最近 30 天活躍儲存庫數</span></div>
+              <RChart type="line" data={this.adapt(analyticsRepositoriesUpdated, '活躍儲存庫數')} options={{}} />
             </Card>
             <Card className="chart">
-              <div className="header"><span className="title">最近 30 天活跃用户排行</span></div>
+              <div className="header"><span className="title">最近 30 天活躍用戶排行</span></div>
               <RChart type="horizontalBar" data={this.adapt(analyticsUsersActivation, '操作')} options={{}} />
             </Card>
             <Card className="chart">
-              <div className="header"><span className="title">最近 30 天活跃仓库排行</span></div>
+              <div className="header"><span className="title">最近 30 天活躍儲存庫排行</span></div>
               <RChart type="horizontalBar" data={this.adapt(analyticsRepositoriesActivation, '操作')} options={{}} />
             </Card>
           </div>

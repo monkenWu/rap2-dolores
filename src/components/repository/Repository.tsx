@@ -32,9 +32,9 @@ function Repository(props: Props) {
   const handleDeleteRepository: MouseEventHandler<HTMLAnchorElement> = e => {
     e.preventDefault()
     const { repository, router, replace } = props
-    const message = `仓库被删除后不可恢复，并且会删除相关的模块和接口！\n确认继续删除『#${
+    const message = `倉庫被刪除后不可回復，並且會刪除相關的模組和介面！\n確認繼續刪除「#${
       repository.id
-    } ${repository.name}』吗？`
+    } ${repository.name}」嗎？`
     if (window.confirm(message)) {
       const { deleteRepository } = props
       deleteRepository(repository.id)
@@ -66,7 +66,7 @@ function Repository(props: Props) {
             </span>
           ) : null}
           <RepositoryForm
-            title="编辑仓库"
+            title="編輯儲存庫"
             open={open}
             onClose={() => setOpen(false)}
             repository={repository}

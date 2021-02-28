@@ -84,7 +84,7 @@ function ImportSwaggerRepositoryForm(props: Props) {
         onClose={(_event, reason) => reason !== 'backdropClick' && onClose()}
         TransitionComponent={SlideUp}
       >
-        <DialogTitle>导入仓库</DialogTitle>
+        <DialogTitle>導入儲存庫</DialogTitle>
         <DialogContent dividers={true}>
           <div className={classes.form}>
             <Formik
@@ -103,7 +103,7 @@ function ImportSwaggerRepositoryForm(props: Props) {
                     setAlertOpen({
                       op: true,
                       msg:
-                        '无法获取 Swagger 数据,请检查您的 Swagger 服务是否允许 CORS，或者使用直接粘贴 JSON 导入',
+                        '無法取得 Swagger 資料，請檢查您的 Swagger 服務是否允許 CORS，或者使用直接貼上 JSON 匯入',
                     })
                     actions.setSubmitting(false)
                     return
@@ -114,7 +114,7 @@ function ImportSwaggerRepositoryForm(props: Props) {
                   } catch (error) {
                     setAlertOpen({
                       op: true,
-                      msg: '解析失败，不是有效的JSON，请检查 JSON 格式',
+                      msg: '解析失敗，不是有效的JSON，請檢查 JSON 格式',
                     })
                     actions.setSubmitting(false)
                     return
@@ -133,10 +133,10 @@ function ImportSwaggerRepositoryForm(props: Props) {
                   dispatch(
                     importSwaggerRepository(importSwagger, (res: any) => {
                       if (res.isOk === 'success') {
-                        setAlertOpen({ op: true, msg: '导入成功' })
+                        setAlertOpen({ op: true, msg: '匯入成功' })
                         window.location.reload()
                       } else {
-                        setAlertOpen({ op: true, msg: `导入失败，请检查文件格式，详细错误：${res.message}.` })
+                        setAlertOpen({ op: true, msg: `匯入失敗，請檢查檔案格式，詳細錯誤：${res.message}.` })
                      }
                       onClose(true)
                       resolve(null)
@@ -161,7 +161,7 @@ function ImportSwaggerRepositoryForm(props: Props) {
                           row={true}
                         >
                           <FormControlLabel disabled={isSubmitting} value={IMPORT_TYPE.SWAGGER_2_0} control={<Radio />} label="Swagger 2.0" />
-                          <FormControlLabel disabled={isSubmitting} value={IMPORT_TYPE.RAP2_ITF_BACKUP} control={<Radio />} label="RAP2接口备份JSON" />
+                          <FormControlLabel disabled={isSubmitting} value={IMPORT_TYPE.RAP2_ITF_BACKUP} control={<Radio />} label="RAP2介面備份JSON" />
                         </RadioGroup>
                       </div>
                       {values.version === IMPORT_TYPE.SWAGGER_2_0 &&
@@ -169,7 +169,7 @@ function ImportSwaggerRepositoryForm(props: Props) {
                           <Field
                             placeholder=""
                             name="docUrl"
-                            label="从 Swagger URL 获取"
+                            label="從 Swagger URL 取得"
                             component={TextField}
                             fullWidth={true}
                             variant="outlined"
@@ -181,7 +181,7 @@ function ImportSwaggerRepositoryForm(props: Props) {
                         <Field
                           placeholder=""
                           name="swagger"
-                          label={values.version === IMPORT_TYPE.SWAGGER_2_0 ? '或者直接粘贴 Swagger JSON' : '粘贴RAP2接口备份JSON'}
+                          label={values.version === IMPORT_TYPE.SWAGGER_2_0 ? '或是直接貼上 Swagger JSON' : '貼上 RAP2 介面備份 JSON'}
                           component={TextField}
                           fullWidth={true}
                           multiline={true}
@@ -199,7 +199,7 @@ function ImportSwaggerRepositoryForm(props: Props) {
                         className="mr1"
                         disabled={isSubmitting}
                       >
-                        {isSubmitting ? '导入中，由于批量导入数据量较大请耐心稍等...' : '提交'}
+                        {isSubmitting ? '導入中，由於批量導入資料量較大請耐心稍等...' : '提交'}
                       </Button>
                       {!isSubmitting && (
                         <Button onClick={() => onClose()} disabled={isSubmitting}>
@@ -228,7 +228,7 @@ function ImportSwaggerRepositoryForm(props: Props) {
         </DialogContent>
         <DialogActions>
           <Button onClick={() => setAlertOpen({ op: false, msg: '' })} color="primary">
-            确认
+            確認
           </Button>
         </DialogActions>
       </Dialog>

@@ -48,7 +48,7 @@ class Tester extends Component<any, any> {
       <section className="Tester">
         <div className="header">
           <div className="card-mods clearfix">
-            <div className="card-title">模块：</div>
+            <div className="card-title">模組：</div>
             <ul className="clearfix">
               {repository.modules.map((item: any) =>
                 <li key={item.id} className={item.id === mod.id ? 'active' : ''}>
@@ -58,7 +58,7 @@ class Tester extends Component<any, any> {
             </ul>
           </div>
           <div className="card-itfs clearfix">
-            <div className="card-title">接口：</div>
+            <div className="card-title">介面：</div>
             <ul className="clearfix">
               {mod.interfaces.map((item: any) =>
                 <li key={item.id} className={item.id === itf.id ? 'active' : ''}>
@@ -71,7 +71,7 @@ class Tester extends Component<any, any> {
         <div className="body">
           <div className="card-props clearfix">
             <form onSubmit={e => { e.preventDefault(); this.handleRequest(itf) }}>
-              <div className="mb6 ml6 font-bold">业务系统：</div>
+              <div className="mb6 ml6 font-bold">業務系統：</div>
               <input value={this.state.target} onChange={e => this.setState({ target: e.target.value })} className="form-control" />
               <ul className="fields clearfix">
                 {Object.keys(requestData).map(key =>
@@ -81,7 +81,7 @@ class Tester extends Component<any, any> {
                   </li>
                 )}
               </ul>
-              <button className="btn btn-success" type="submit">Submit</button>
+              <button className="btn btn-success" type="submit">提交</button>
             </form>
           </div>
           <div className="card-result">

@@ -47,7 +47,7 @@ class ImportRepositoryForm extends Component<any, any> {
             </div>
             {+version === 1 && (
               <div className="form-group row">
-                <label className="col-sm-4 control-label">文档URL</label>
+                <label className="col-sm-4 control-label">文件URL</label>
                 <div className="col-sm-10">
                   <input
                     name="projectId"
@@ -66,12 +66,12 @@ class ImportRepositoryForm extends Component<any, any> {
             )}
             {(+version === 2 || +version === 3) && (
               <div className="form-group row">
-                <label className="col-sm-4 control-label">文档数据</label>
+                <label className="col-sm-4 control-label">文件資料</label>
                 <div className="col-sm-10">
                   <TextField
                     value={projectData}
                     onChange={e => this.setState({ projectData: e.target.value })}
-                    placeholder="请将projectData粘贴到此处"
+                    placeholder="請將projectData貼上到此處"
                     multiline={true}
                     style={{ width: 600, height: 300, margin: 16 }}
                     rowsMax={10}
@@ -89,7 +89,7 @@ class ImportRepositoryForm extends Component<any, any> {
                   variant="contained"
                   color="primary"
                   style={{ marginRight: 8 }}
-                >{disableSubmit ? '导入中，请稍等...' : '提交'}
+                >{disableSubmit ? '匯入中，請稍等...' : '提交'}
                 </Button>
                 <Button onClick={() => rmodal.close()}>取消</Button>
               </div>

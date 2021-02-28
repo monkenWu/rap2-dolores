@@ -50,7 +50,7 @@ export function CreateButton(props: CreateButtonProps) {
           color="primary"
           onClick={() => setUpdateOrganization(true)}
         >
-          编辑团队
+          編輯團隊
         </Button>
       )}
 
@@ -66,11 +66,11 @@ export function CreateButton(props: CreateButtonProps) {
         color="primary"
         onClick={() => setCreating(true)}
       >
-        新建仓库
+        新建儲存庫
       </Button>
 
       <RepositoryForm
-        title="新建仓库"
+        title="新建儲存庫"
         open={creating}
         onClose={() => setCreating(false)}
         organizationId={organization ? organization.id : undefined}
@@ -84,7 +84,7 @@ export function CreateButton(props: CreateButtonProps) {
           color="primary"
           onClick={() => setImporting(true)}
         >
-          <GoArrowRight /> 导入仓库
+          <GoArrowRight /> 匯入儲存庫
         </Button>
       )}
 
@@ -94,7 +94,7 @@ export function CreateButton(props: CreateButtonProps) {
           onClose={() => setImporting(false)}
           onResolve={handleUpdate}
         >
-          <ImportRepositoryForm title="导入仓库" orgId={organization.id} />
+          <ImportRepositoryForm title="匯入儲存庫" orgId={organization.id} />
         </RModal>
       )}
     </span>
@@ -110,8 +110,8 @@ export function RepositoriesTypeDropdown(props: { url: string }) {
   }
   return (
     <Select className="mr8" value={url} onChange={e => handlePush(e.target.value as string)}>
-      <MenuItem value="/repository/joined">我的仓库</MenuItem>
-      <MenuItem value="/repository/all">所有仓库</MenuItem>
+      <MenuItem value="/repository/joined">我的儲存庫</MenuItem>
+      <MenuItem value="/repository/all">所有儲存庫</MenuItem>
     </Select>
   )
 }
@@ -133,7 +133,7 @@ export function SearchGroup(props: { name: string }) {
   return (
     <TextField
       value={query || ''}
-      placeholder="搜索仓库：名称、ID"
+      placeholder="搜尋儲存庫：名稱、ID"
       autoComplete="off"
       onChange={e => setQuery(e.target.value.trim())}
       onKeyUp={e => e.which === 13 && handleSearch()}

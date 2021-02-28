@@ -158,7 +158,7 @@ function RepositoryForm(props: Props) {
                   <div className="rmodal-body">
                     {values.id > 0 && (
                       <div className={classes.formItem}>
-                        <div className={classes.formTitle}>拥有者</div>
+                        <div className={classes.formTitle}>擁有者</div>
 
                         {values.owner && values.owner.id === auth.id ? (
                           <UserList
@@ -182,12 +182,12 @@ function RepositoryForm(props: Props) {
                       </div>
                     )}
                     <div className={classes.formItem}>
-                      <Field name="name" label="仓库名称" component={TextField} fullWidth={true} />
+                      <Field name="name" label="儲存庫名稱" component={TextField} fullWidth={true} />
                     </div>
                     <div className={classes.formItem}>
                       <Field
                         name="description"
-                        label="说明(多行，支持Markdown)"
+                        label="說明（多行，支援Markdown）"
                         multiline={true}
                         component={TextField}
                         fullWidth={true}
@@ -195,7 +195,7 @@ function RepositoryForm(props: Props) {
                       />
                     </div>
                     <div className={classes.formItem}>
-                      <div className={classes.formTitle}>成员</div>
+                      <div className={classes.formTitle}>成員</div>
                       <UserList
                         isMulti={true}
                         loadOptions={loadUserOptions}
@@ -207,7 +207,7 @@ function RepositoryForm(props: Props) {
                       />
                     </div>
                     <div className={classes.formItem}>
-                      <div className={classes.formTitle}>团队</div>
+                      <div className={classes.formTitle}>團隊</div>
                       <Select
                         isMulti={false}
                         isClearable={true}
@@ -223,7 +223,7 @@ function RepositoryForm(props: Props) {
                     <div className={classes.formItem}>
                       <Field
                         name="collaboratorIdstring"
-                        label="协同仓库ID"
+                        label="協同儲存庫ID"
                         component={TextField}
                         fullWidth={true}
                       />
