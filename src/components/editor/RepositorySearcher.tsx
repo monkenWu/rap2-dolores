@@ -90,7 +90,7 @@ class DropdownMenuBase extends Component<any, any> {
         {nextRespository.modules.map((mod: any, index: any, modules: any) =>
           <div key={`mod-${mod.id}`}>
             <Link to={uri.setSearch({ mod: mod.id }).href()} onClick={onSelect} className="dropdown-item dropdown-item-module">
-              <span className="label">模块</span>
+              <span className="label">模組</span>
               <Highlight className="dropdown-item-clip" clip={mod.name} seed={seed} />
             </Link>
             {mod.interfaces.map((itf: any) =>
@@ -100,14 +100,14 @@ class DropdownMenuBase extends Component<any, any> {
                   onClick={onSelect}
                   className="dropdown-item dropdown-item-interface"
                 >
-                  <span className="label">接口</span>
+                  <span className="label">介面</span>
                   <Highlight className="dropdown-item-clip" clip={itf.name} seed={seed} />
                   <Highlight className="dropdown-item-clip" clip={itf.method} seed={seed} />
                   <Highlight className="dropdown-item-clip" clip={itf.url} seed={seed} />
                 </Link>
                 {itf.properties.map((property: any) =>
                   <Link key={`property-${property.id}`} to={uri.setSearch({ mod: property.moduleId }).setSearch({ itf: property.interfaceId }).href()} onClick={onSelect} className="dropdown-item dropdown-item-property">
-                    <span className="label">属性</span>
+                    <span className="label">屬性</span>
                     <Highlight className="dropdown-item-clip" clip={property.name} seed={seed} />
                   </Link>
                 )}
@@ -151,7 +151,7 @@ class RepositorySearcher extends Component<any, IState> {
           }}
           style={{ backgroundColor: '#fafbfc', marginRight: 12 }}
           className="dropdown-input form-control"
-          placeholder="检索名称或ID"
+          placeholder="檢索名稱或ID"
           InputProps={{
             endAdornment: (
               <InputAdornment position="end">

@@ -86,10 +86,10 @@ function ModuleList(props: ModuleListProps) {
         {repository.canUserEdit ? (
           <li>
             <span onClick={() => setOpen(true)} className="g-link">
-              <GoPackage className="fontsize-14" /> 新建模块
+              <GoPackage className="fontsize-14" /> 新建模組
             </span>
             <ModuleForm
-              title="新建模块"
+              title="新建模組"
               repository={repository}
               open={open}
               onClose={() => setOpen(false)}

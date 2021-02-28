@@ -71,7 +71,7 @@ const FormattedRow = ({ row }: { row: HistoryLog }) => {
           size="small"
           className="mb1"
         >
-          {expanded ? '折叠' : '展开更多'}
+          {expanded ? '摺疊' : '展開更多'}
         </Button>
       )}
     </div>

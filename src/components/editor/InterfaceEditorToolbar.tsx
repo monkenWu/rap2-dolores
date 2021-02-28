@@ -69,7 +69,7 @@ function InterfaceEditorToolbar(props: Props) {
           variant="contained"
           color="primary"
           disabled={loading}
-          label="保存"
+          label="儲存"
           size="small"
         >
           <Save className={classes.rightIcon} />
@@ -83,20 +83,20 @@ function InterfaceEditorToolbar(props: Props) {
           取消
           <Cancel className={classes.rightIcon} />
         </Button>
-        <span className="locker-warning hide">已经锁定当前接口！</span>
+        <span className="locker-warning hide">已經鎖定當前介面！</span>
       </div>
     )
   }
   if (locker) {
     return (
       <div className="InterfaceEditorToolbar">
-        <div className="alert alert-danger">当前接口已经被 <span className="nowrap">{locker.fullname}</span> 锁定！</div>
+        <div className="alert alert-danger">當前介面已經被 <span className="nowrap">{locker.fullname}</span> 鎖定！</div>
       </div>
     )
   }
   return (
     <div className="InterfaceEditorToolbar">
-       <Tooltip title="导出的备份文件，可以导入到其它项目，或本项目">
+       <Tooltip title="匯出的備份檔，可以導入到其它專案，或本專案">
         <Button
           className={`${classes.button} guide-2`}
           variant="contained"
@@ -107,7 +107,7 @@ function InterfaceEditorToolbar(props: Props) {
         <CloudDownload className={classes.rightIcon} />
         </Button>
       </Tooltip>
-      <Tooltip title="查看该接口中的所有改动历史">
+      <Tooltip title="查看該介面中的所有改動歷史">
         <Button
           className={`${classes.button} guide-2`}
           variant="contained"
@@ -118,25 +118,25 @@ function InterfaceEditorToolbar(props: Props) {
         <History className={classes.rightIcon} />
         </Button>
       </Tooltip>
-      <Tooltip title="移动或复制该接口">
+      <Tooltip title="移動或複製該介面">
         <Button
           className={classes.button}
           onClick={handleMoveInterface}
           variant="contained"
           size="small"
         >
-          移动
+          移動
         <KeyboardTab className={classes.rightIcon} />
         </Button>
       </Tooltip>
-      <Tooltip title="点击进入编辑模式，并锁定该接口">
+      <Tooltip title="點擊進入編輯模式，並鎖定該介面">
         <LoadingButton
           className={classes.button}
           onClick={handleEditInterface}
           variant="contained"
           color="primary"
           disabled={loading}
-          label="编辑"
+          label="編輯"
           size="small"
         >
           <Create className={classes.rightIcon} />

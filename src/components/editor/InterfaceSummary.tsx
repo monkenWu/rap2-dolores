@@ -80,7 +80,7 @@ function url2name(itf: any) {
     return {
       ok: false,
       name: '',
-      message: `\n  ✘ 您的rap接口url设置格式不正确，参考格式：/api/test.json (接口url:${apiUrl}, 项目id:${projectId}, 接口id:${id})\n`,
+      message: `\n  ✘ 您的rap介面 url 設定格式不正確，參考格式：/api/test.json (介面url:${apiUrl}, 專案id:${projectId}, 介面id:${id})\n`,
     }
   }
 
@@ -178,19 +178,19 @@ class InterfaceSummary extends Component<
     const { itf = {} } = this.props
     const res = url2name(itf)
     if (!res.ok) {
-      this.props.showMessage(`复制失败: ${res.message}`, MSG_TYPE.ERROR)
+      this.props.showMessage(`複製失敗: ${res.message}`, MSG_TYPE.ERROR)
       return
     }
     const modelName = res.name
     copy(modelName)
       .then(() => {
         this.props.showMessage(
-          `成功复制 ${modelName} 到剪贴板`,
+          `成功複製 ${modelName} 到剪貼簿`,
           MSG_TYPE.SUCCESS
         )
       })
       .catch(() => {
-        this.props.showMessage(`复制失败`, MSG_TYPE.ERROR)
+        this.props.showMessage(`複製失敗`, MSG_TYPE.ERROR)
       })
   }
   render() {
@@ -229,7 +229,7 @@ class InterfaceSummary extends Component<
                 <TextField
                   style={{ marginTop: 0 }}
                   id="name"
-                  label="名称"
+                  label="名稱"
                   value={itf.name || ''}
                   fullWidth={true}
                   autoComplete="off"
@@ -242,7 +242,7 @@ class InterfaceSummary extends Component<
               <div>
                 <TextField
                   id="url"
-                  label="地址"
+                  label="位址"
                   value={itf.url || ''}
                   fullWidth={true}
                   autoComplete="off"
@@ -254,7 +254,7 @@ class InterfaceSummary extends Component<
               </div>
               <div>
                 <div style={{ width: 90, display: 'inline-block' }}>
-                  <InputLabel shrink={true} htmlFor="method-label-placeholder"> 类型 </InputLabel>
+                  <InputLabel shrink={true} htmlFor="method-label-placeholder"> 類型 </InputLabel>
                   <Select
                     value={itf.method}
                     input={<Input name="method" id="method-label-placeholder" />}
@@ -272,7 +272,7 @@ class InterfaceSummary extends Component<
                   </Select>
                 </div>
                 <div style={{ width: 120, display: 'inline-block' }}>
-                  <InputLabel shrink={true} htmlFor="status-label-placeholder" style={{ width: 100 }}> 状态码 </InputLabel>
+                  <InputLabel shrink={true} htmlFor="status-label-placeholder" style={{ width: 100 }}> 狀態碼 </InputLabel>
                   <Select
                     value={itf.status}
                     input={<Input name="status" id="status-label-placeholder" />}
@@ -292,7 +292,7 @@ class InterfaceSummary extends Component<
               </div>
               <TextField
                 id="description"
-                label="描述（可多行, 支持Markdown）"
+                label="描述（可多行， 支援 Markdown）"
                 value={itf.description || ''}
                 fullWidth={true}
                 multiline={true}
@@ -308,14 +308,14 @@ class InterfaceSummary extends Component<
               <>
                 <li>
                   <span className="mr5">
-                    <span className="label">接口ID：</span>
+                    <span className="label">介面ID：</span>
                     {itf.id}
                   </span>
                 </li>
                 <li>
                   <CopyToClipboard text={itf.url} type="right">
                     <span className="mr5">
-                      <span className="label">地址：</span>
+                      <span className="label">位址：</span>
                       <a
                         href={`${serve}/app/mock/${repository.id}${getRelativeUrl(itf.url || '')}`}
                         target="_blank"
@@ -328,13 +328,13 @@ class InterfaceSummary extends Component<
                 </li>
                 <li>
                   <span>
-                    <span className="label">类型：</span>
+                    <span className="label">類型：</span>
                     <span>{itf.method}</span>
                   </span>
                 </li>
                 <li>
                   <span>
-                    <span className="label">状态码：</span>
+                    <span className="label">狀態碼：</span>
                     <span>{itf.status}</span>
                   </span>
                 </li>
@@ -399,7 +399,7 @@ class InterfaceSummary extends Component<
   }
   handleDelete = (e: any, itf: any) => {
     e.preventDefault()
-    const message = '接口被删除后不可恢复！\n确认继续删除吗？'
+    const message = '介面被刪除后不可回復！ n確認繼續刪除嗎？'
     if (window.confirm(message)) {
       const { onDeleteInterface } = this.context
       onDeleteInterface(itf.id, () => {

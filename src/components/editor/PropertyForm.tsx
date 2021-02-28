@@ -57,7 +57,7 @@ class PropertyForm extends Component<any, any> {
         <form className="form-horizontal w600" onSubmit={this.handleSubmit}>
           <div className="rmodal-body">
             <div className="form-group row" style={{}}>
-              <label className="col-sm-2 control-label">名称：</label>
+              <label className="col-sm-2 control-label">名稱：</label>
               <div className="col-sm-10">
                 <input
                   name="name"
@@ -73,7 +73,7 @@ class PropertyForm extends Component<any, any> {
               </div>
             </div>
             <div className="form-group row">
-              <label className="col-sm-2 control-label">类型：</label>
+              <label className="col-sm-2 control-label">類型：</label>
               <div className="col-sm-10">
                 <select
                   name="type"
@@ -97,7 +97,7 @@ class PropertyForm extends Component<any, any> {
               </div>
             </div>
             <div className="form-group row">
-              <label className="col-sm-2 control-label">生成规则：</label>
+              <label className="col-sm-2 control-label">產生規則：</label>
               <div className="col-sm-10">
                 <input
                   name="rule"
@@ -125,7 +125,7 @@ class PropertyForm extends Component<any, any> {
               </div>
             </div>
             <div className="form-group row">
-              <label className="col-sm-2 control-label">简介：</label>
+              <label className="col-sm-2 control-label">簡介：</label>
               <div className="col-sm-10">
                 <SmartTextarea
                   tabIndex={5}

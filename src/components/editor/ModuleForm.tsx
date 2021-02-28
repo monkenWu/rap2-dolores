@@ -98,7 +98,7 @@ function ModuleForm(props: Props) {
                     <div className={classes.formItem}>
                       <Field
                         name="name"
-                        label="模块名称"
+                        label="模組名稱"
                         component={TextField}
                         fullWidth={true}
                       />
@@ -106,7 +106,7 @@ function ModuleForm(props: Props) {
                     <div className={classes.formItem}>
                       <Field
                         name="description"
-                        label="模块简介"
+                        label="模組簡介"
                         component={TextField}
                         multiline={true}
                         fullWidth={true}

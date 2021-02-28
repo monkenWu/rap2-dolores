@@ -13,10 +13,10 @@ import Spin from '../../components/utils/Spin'
 import { showMessage, MSG_TYPE } from 'actions/common'
 
 export const RequestPropertyList = (props: any) => {
-  return <PropertyList scope="request" title="请求参数" label="请求" {...props} />
+  return <PropertyList scope="request" title="請求參數" label="請求" {...props} />
 }
 export const ResponsePropertyList = (props: any) => (
-  <PropertyList scope="response" title="响应内容" label="响应" {...props} />
+  <PropertyList scope="response" title="回應內容" label="回應" {...props} />
 )
 type InterfaceEditorProps = {
   auth: any
@@ -248,17 +248,17 @@ class InterfaceEditor extends Component<InterfaceEditorProps, InterfaceEditorSta
     const { itf } = this.state
     const { updateProperties, updateInterface } = this.props
     if (!itf.name.trim()) {
-      this.props.showMessage('名称不能为空', MSG_TYPE.WARNING)
+      this.props.showMessage('名稱不能為空', MSG_TYPE.WARNING)
       return
     }
 
     if (!itf.url.trim()) {
-      this.props.showMessage('URL地址不能为空', MSG_TYPE.WARNING)
+      this.props.showMessage('URL位址不能為空', MSG_TYPE.WARNING)
       return
     }
 
     if (itf.url.substring(0, 4) !== 'http' && itf.url[0] !== '/') {
-      this.props.showMessage('合法的URL地址，需以 http 或 / 开头，例如/a/b 或者 https://www.taobao.com', MSG_TYPE.WARNING)
+      this.props.showMessage('合理的 URL 位址，需以 http 或 / 開頭，例如/a/b 或者 https://www.taobao.com', MSG_TYPE.WARNING)
       return
     }
 
@@ -267,7 +267,7 @@ class InterfaceEditor extends Component<InterfaceEditorProps, InterfaceEditorSta
     const getPKey = (p: Property) => `${p.name}|${p.parentId}|${p.scope}`
     for (const p of this.state.properties) {
       if (!p.name.trim()) {
-        this.props.showMessage(`有参数未命名，请检查...${p.description ? '描述为：' + p.description : ''}`, MSG_TYPE.WARNING)
+        this.props.showMessage(`有參數尚未命名，請檢查...${p.description ? '描述為：' + p.description : ''}`, MSG_TYPE.WARNING)
         return
       }
       p.name = p.name.trim()
@@ -278,7 +278,7 @@ class InterfaceEditor extends Component<InterfaceEditorProps, InterfaceEditorSta
         pMap[key] = 1
       }
       if (pMap[key] > 1) {
-        this.props.showMessage(`参数${p.name}命名冲突，同层级不能有相同的属性名`, MSG_TYPE.WARNING)
+        this.props.showMessage(`參數${p.name}命名衝突，同層級不能有相同的屬性名`, MSG_TYPE.WARNING)
         return
       }
     }

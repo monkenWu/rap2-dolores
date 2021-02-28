@@ -83,7 +83,7 @@ function DefaultValueModal({ open, handleClose, repositoryId, enqueueSnackbar }:
   const onSubmit = () => {
     dispatch(updateDefaultVals(repositoryId, editingData))
     handleClose()
-    enqueueSnackbar(`更新默认值成功`, {
+    enqueueSnackbar(`修改預設值成功`, {
       variant: 'success',
       autoHideDuration: 1000,
     })
@@ -96,24 +96,24 @@ function DefaultValueModal({ open, handleClose, repositoryId, enqueueSnackbar }:
           <IconButton edge="start" color="inherit" onClick={handleClose} aria-label="close">
             <CloseIcon />
           </IconButton>
-          <Typography variant="h6" className={classes.title}>默认值配置</Typography>
+          <Typography variant="h6" className={classes.title}>預設設定</Typography>
           <Button color="inherit" onClick={onSubmit}>
-            保存
+            儲存
         </Button>
         </Toolbar>
       </AppBar>
       <DialogContent>
         <div className={classes.topHint}>
-          <Typography variant="body1"> 系统将根据变量名进行搜索，如果生成规则和初始值均未填写，系统才会对同名参数的Mock规则进行覆盖。</Typography>
+          <Typography variant="body1"> 系統將根據變數名進行搜索，如果產生規則和初始值均未填寫，系統才會對同名參數的 Mock 規則進行覆蓋。</Typography>
         </div>
         <div className={classes.btn}>
-          <Button onClick={addNewLine} color="primary" variant="contained" size="small">添加一行</Button>
+          <Button onClick={addNewLine} color="primary" variant="contained" size="small">新增一行</Button>
         </div>
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell>变量名</TableCell>
-              <TableCell>生成规则</TableCell>
+              <TableCell>變數名</TableCell>
+              <TableCell>產生規則</TableCell>
               <TableCell>初始值</TableCell>
               <TableCell />
             </TableRow>
@@ -125,21 +125,21 @@ function DefaultValueModal({ open, handleClose, repositoryId, enqueueSnackbar }:
                   <TextField
                     value={row.name}
                     onChange={e => onChange('name', i, e.target.value)}
-                    placeholder="请输入变量名"
+                    placeholder="請輸入變數名"
                   />
                 </TableCell>
                 <TableCell>
                   <TextField
                     value={row.rule}
                     onChange={e => onChange('rule', i, e.target.value)}
-                    placeholder="请输入生成规则"
+                    placeholder="請輸入產生規則"
                   />
                 </TableCell>
                 <TableCell>
                   <TextField
                     value={row.value}
                     onChange={e => onChange('value', i, e.target.value)}
-                    placeholder="请输入初始值"
+                    placeholder="請輸入初始值"
                   />
                 </TableCell>
                 <TableCell>

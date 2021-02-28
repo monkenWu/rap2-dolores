@@ -37,7 +37,7 @@ function InterfaceBase(props: InterfaceBaseProps) {
 
   const handleDeleteInterface: MouseEventHandler<HTMLAnchorElement> = e => {
     e.preventDefault()
-    const message = `接口被删除后不可恢复！\n确认继续删除『#${itf!.id} ${itf!.name}』吗？`
+    const message = `介面被刪除后不可回復！\n確認繼續刪除「#${itf!.id} ${itf!.name}」嗎？`
     if (window.confirm(message)) {
       const { deleteInterface } = props
       deleteInterface(props.itf!.id, () => {
@@ -57,7 +57,7 @@ function InterfaceBase(props: InterfaceBaseProps) {
               curItf &&
               curItf.locker
             ) {
-              if (!window.confirm('编辑模式下切换接口，会导致编辑中的资料丢失，是否确定切换接口？')) {
+              if (!window.confirm('編輯模式下切換介面，會導致編輯中的資料丟失，是否確定切換介面？')) {
                 e.preventDefault()
               } else {
                 unlockInterface(curItf.id)
@@ -150,15 +150,15 @@ function InterfaceList(props: InterfaceListProps) {
     e.preventDefault()
     const message = (
       <div style={{ width: 800 }}>
-        <div><div style={dangerousStyles}>模块</div>被删除后<div style={dangerousStyles}>不可恢复</div>！并且会删除<div style={dangerousStyles}>相关的接口</div>！</div>
+        <div><div style={dangerousStyles}>模組</div>被刪除後<div style={dangerousStyles}>不可回復</div>！ 並且會刪除<div style={dangerousStyles}>相關的介面</div>！</div>
         <div>
-          确认继续删除『#${mod.id} ${mod.name}
-          』吗？
+          確認繼續刪除「#${mod.id} ${mod.name}
+          」嗎？
         </div>
       </div>
     )
     confirm({
-      title: '确认删除模块',
+      title: '確認刪除模組',
       content: message,
     }).then(() => {
       dispatch(
@@ -181,7 +181,7 @@ function InterfaceList(props: InterfaceListProps) {
   }
 
   if (repository.modules.length === 0) {
-    return <div style={{ height: 600 }}>请先添加模块</div>
+    return <div style={{ height: 600 }}>請先添加模組</div>
   }
 
 
@@ -196,11 +196,11 @@ function InterfaceList(props: InterfaceListProps) {
             color="primary"
             onClick={() => setInterfaceFormOpen(true)}
           >
-            新建接口
+            新建介面
           </Button>
 
           <InterfaceForm
-            title="新建接口"
+            title="新建介面"
             repository={repository}
             mod={mod}
             open={interfaceFormOpen}
@@ -209,19 +209,19 @@ function InterfaceList(props: InterfaceListProps) {
 
           <ButtonGroup fullWidth={true} size="medium">
             <Button variant="outlined" color="primary" onClick={() => setModuleFormOpen(true)}>
-              修改模块
+              修改模組
             </Button>
             <Button variant="outlined" color="primary" onClick={() => setMoveModuleFormOpen(true)}>
-              移动/复制
+              移動/複製
             </Button>
             <Button variant="outlined" color="primary" onClick={handleDeleteModule}>
-              删除模块
+              刪除模組
             </Button>
           </ButtonGroup>
 
           {moduleFormOpen && (
             <ModuleForm
-              title="修改模块"
+              title="修改模組"
               module={mod}
               repository={repository}
               open={moduleFormOpen}
@@ -231,7 +231,7 @@ function InterfaceList(props: InterfaceListProps) {
 
           {moveModuleFormOpen && (
             <MoveModuleForm
-              title="移动/复制模块"
+              title="移動/複製模組"
               mod={mod}
               repository={repository}
               open={moveModuleFormOpen}
@@ -265,7 +265,7 @@ function InterfaceList(props: InterfaceListProps) {
           </CustomScroll>
         </div>
       ) : (
-          <div className="alert alert-info">暂无接口，请新建</div>
+          <div className="alert alert-info">暫無介面，請新建</div>
         )}
     </article>
   )

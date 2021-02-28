@@ -119,7 +119,7 @@ export default function MoveInterfaceForm(props: Props) {
         <form className={classes.form} onSubmit={handleSubmit}>
           <div className="rmodal-body">
             <div className={classes.formItem}>
-              <div className={classes.formTitle}>选择目标仓库：</div>
+              <div className={classes.formTitle}>選擇目標儲存庫：</div>
               <FormControl>
                 <Select
                   className={classes.select}
@@ -136,7 +136,7 @@ export default function MoveInterfaceForm(props: Props) {
               </FormControl>
             </div>
             <div className={classes.formItem}>
-              <div className={classes.formTitle}>选择目标模块：</div>
+              <div className={classes.formTitle}>選擇目標模組：</div>
               <FormControl>
                 <Select
                   className={classes.select}
@@ -153,7 +153,7 @@ export default function MoveInterfaceForm(props: Props) {
               </FormControl>
             </div>
             <div className={classes.formItem}>
-              <div className={classes.formTitle}>操作类型：</div>
+              <div className={classes.formTitle}>操作類型：</div>
               <RadioGroup
                 name="radioListOp"
                 value={String(op)}
@@ -162,8 +162,8 @@ export default function MoveInterfaceForm(props: Props) {
                 }}
                 row={true}
               >
-                <FormControlLabel value={String(OP_MOVE)} control={<Radio />} label="移动" />
-                <FormControlLabel value={String(OP_COPY)} control={<Radio />} label="复制" />
+                <FormControlLabel value={String(OP_MOVE)} control={<Radio />} label="移動" />
+                <FormControlLabel value={String(OP_COPY)} control={<Radio />} label="複製" />
               </RadioGroup>
             </div>
             <div className={classes.ctl}>

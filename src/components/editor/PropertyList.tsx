@@ -80,12 +80,12 @@ class SortableTreeTableHeader extends Component<any, any> {
               {editable && <GoPlus className="fontsize-14 color-6" />}
             </Link>
           </div>
-          <div className="th name">名称</div>
-          <div className="th type">必选</div>
-          <div className="th type">类型</div>
+          <div className="th name">名稱</div>
+          <div className="th type">必選</div>
+          <div className="th type">類型</div>
           {/* TODO 2.3 规则编辑器 */}
           <div className="th rule">
-            生成规则
+            產生規則
             <a
               href="https://github.com/nuysoft/Mock/wiki/Syntax-Specification"
               rel="noopener noreferrer"
@@ -97,7 +97,7 @@ class SortableTreeTableHeader extends Component<any, any> {
           </div>
           <div className="th value">初始值</div>
           {/* 对象和数组也允许设置初始值 */}
-          <div className="th desc">简介</div>
+          <div className="th desc">簡介</div>
         </div>
       </div>
     )
@@ -327,7 +327,7 @@ class SortableTreeTableRow extends Component<SortableTreeTableRowProps, Sortable
                           }
                           color="primary"
                           inputProps={{
-                            'aria-label': '必选',
+                            'aria-label': '必選',
                           }}
                         />
                       </div>
@@ -542,14 +542,14 @@ class PropertyList extends PureComponent<any, any> {
                   新建
                 </Button>,
                 <Button key={2} onClick={this.handleClickImporterButton}>
-                  导入
+                  導入
                 </Button>,
               ]}
               <Button
                 className={this.state.previewer ? 'checked-button' : ''}
                 onClick={this.handleClickPreviewerButton}
               >
-                预览
+                預覽
               </Button>
             </ButtonGroup>
           </div>
@@ -586,7 +586,7 @@ class PropertyList extends PureComponent<any, any> {
           onResolve={this.handleCreatePropertySucceeded}
         >
           <PropertyForm
-            title={`新建${label}属性`}
+            title={`新建${label}屬性`}
             scope={scope}
             repository={repository}
             mod={mod}
@@ -599,7 +599,7 @@ class PropertyList extends PureComponent<any, any> {
           onResolve={this.handleCreatePropertySucceeded}
         >
           <PropertyForm
-            title={`新建${label}属性`}
+            title={`新建${label}屬性`}
             scope={scope}
             repository={repository}
             mod={mod}
@@ -613,7 +613,7 @@ class PropertyList extends PureComponent<any, any> {
           onResolve={this.handleCreatePropertySucceeded}
         >
           <Importer
-            title={`导入${label}属性`}
+            title={`匯入${label}屬性`}
             repository={repository}
             mod={mod}
             interfaceId={interfaceId}

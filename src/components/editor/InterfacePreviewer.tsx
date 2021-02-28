@@ -100,7 +100,7 @@ class Previewer extends Component<any, any> {
           </div>
           <div className="result-mocked">
             <div className="header">
-              <span className="title">{label}数据</span>
+              <span className="title">{label}數據</span>
               {scope === 'response' ? (
                 <a
                   href={`${serve}/app/mock/data/${interfaceId}`}
@@ -124,12 +124,12 @@ class Previewer extends Component<any, any> {
               {!valid.length ? (
                 <span>
                   <GoBeaker className="mr6 fontsize-20" />
-                  模板与数据匹配 √
+                  模板與資料相符 √
                 </span>
               ) : (
                 <span>
                   <GoBug className="mr6 fontsize-20" />
-                  模板与数据不匹配
+                  模板與數據不相符
                 </span>
               )}
             </div>
@@ -138,10 +138,10 @@ class Previewer extends Component<any, any> {
       )
     } catch (ex) {
       if (scopedData) {
-        scopedData.response = `无法预览Mock数据，因为您编写规则导致如下错误：${ex.message}`
+        scopedData.response = `無法預覽 Mock 資料，因為您編寫規則導致如下錯誤：${ex.message}`
       }
     }
-    return <div>发生错误...</div>
+    return <div>發生錯誤...</div>
   }
   remock = (e: any) => {
     e.preventDefault()

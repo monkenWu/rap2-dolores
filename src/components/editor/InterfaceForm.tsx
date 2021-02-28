@@ -118,7 +118,7 @@ function InterfaceForm(props: Props) {
                     <div className={classes.formItem}>
                       <Field
                         name="name"
-                        label="名称"
+                        label="名稱"
                         component={TextField}
                         fullWidth={true}
                       />
@@ -126,7 +126,7 @@ function InterfaceForm(props: Props) {
                     <div className={classes.formItem}>
                       <Field
                         name="url"
-                        label="URL地址"
+                        label="URL位址"
                         component={TextField}
                         fullWidth={true}
                       />
@@ -137,7 +137,7 @@ function InterfaceForm(props: Props) {
                           shrink={true}
                           htmlFor="method-label-placeholder"
                         >
-                          类型
+                          類型
                         </InputLabel>
                         <Select
                           value={values.method}
@@ -160,7 +160,7 @@ function InterfaceForm(props: Props) {
                         shrink={true}
                         htmlFor="method-label-placeholder"
                       >
-                        状态码
+                        狀態碼
                       </InputLabel>
                       <Select
                         value={values.status}
@@ -180,7 +180,7 @@ function InterfaceForm(props: Props) {
                     <div className={classes.formItem}>
                       <Field
                         name="description"
-                        label="说明"
+                        label="說明"
                         component={TextField}
                         multiline={true}
                         fullWidth={true}

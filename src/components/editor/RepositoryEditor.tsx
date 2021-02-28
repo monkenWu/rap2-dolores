@@ -129,7 +129,7 @@ class RepositoryEditor extends Component<Props, States> {
     } = this.props
     const { repository: repositoryAsync } = this.props
     if (!repositoryAsync.fetching && !repositoryAsync.data) {
-      return <div className="p100 fontsize-30 text-center">未找到对应仓库</div>
+      return <div className="p100 fontsize-30 text-center">未找到對應儲存庫</div>
     }
     if (repositoryAsync.fetching || !repositoryAsync.data || !repositoryAsync.data.id) {
       return <Spin />
@@ -177,7 +177,7 @@ class RepositoryEditor extends Component<Props, States> {
 
             {repository.canUserEdit ? (
               <span className="g-link edit mr1" onClick={() => this.setState({ update: true })}>
-                <GoPencil /> 编辑
+                <GoPencil /> 編輯
               </span>
             ) : null}
             <RepositoryForm
@@ -186,7 +186,7 @@ class RepositoryEditor extends Component<Props, States> {
                 ok && this.handleUpdate()
                 this.setState({ update: false })
               }}
-              title="编辑仓库"
+              title="編輯儲存庫"
               repository={repository}
             />
             <a
@@ -195,7 +195,7 @@ class RepositoryEditor extends Component<Props, States> {
               rel="noopener noreferrer"
               className="g-link"
             >
-              <GoPlug /> 插件
+              <GoPlug /> 外掛程式
             </a>
             <a
               href={`${serve}/repository/get?id=${repository.id}&token=${repository.token}`}
@@ -203,10 +203,10 @@ class RepositoryEditor extends Component<Props, States> {
               rel="noopener noreferrer"
               className="g-link"
             >
-              <GoDatabase /> 数据
+              <GoDatabase /> 資料
             </a>
             <span className="g-link edit mr1" onClick={() => this.setState({ importSwagger: true })}>
-              <GoLinkExternal /> 导入
+              <GoLinkExternal /> 匯入
             </span>
             <ImportSwaggerRepositoryForm
               open={this.state.importSwagger}
@@ -220,7 +220,7 @@ class RepositoryEditor extends Component<Props, States> {
               mode="manual"
             />
             <span className="g-link edit mr1" onClick={() => this.setState({ exportPostman: true })}>
-              <GoLinkExternal /> 导出
+              <GoLinkExternal /> 匯出
             </span>
             <ExportPostmanForm
               title="导出"
@@ -232,13 +232,13 @@ class RepositoryEditor extends Component<Props, States> {
               className="g-link edit mr1"
               onClick={() => this.setState({ defaultValuesModalOpen: true })}
             >
-              <GoEllipsis /> 默认值
+              <GoEllipsis /> 預設值
             </span>
             <span
               className="g-link edit mr1 guide-1"
               onClick={() => this.setState({ historyLogDrawerOpen: true })}
             >
-              <FaHistory /> 历史
+              <FaHistory /> 歷史
             </span>
             <DefaultValueModal
               open={this.state.defaultValuesModalOpen}
@@ -282,29 +282,29 @@ class RepositoryEditor extends Component<Props, States> {
           showSkipButton={true}
           run={this.state.guideOpen}
           locale={{
-            skip: '跳过',
+            skip: '跳過',
             next: '下一步',
             back: '上一步',
             last: '完成',
           }}
           steps={[
             {
-              title: '历史记录上线',
+              title: '歷史記錄上線',
               disableBeacon: true,
-              content: <Typography variant="h6">现在您可以查看项目修改历史了!</Typography>,
+              content: <Typography variant="h6">現在您可以查看專案修改歷史了!</Typography>,
               placement: 'top',
               target: '.guide-1',
             },
             {
-              title: '历史记录上线',
+              title: '歷史記錄上線',
               disableBeacon: true,
-              content: <Typography variant="h6">您也可以查看指定接口的所有改动记录。</Typography>,
+              content: <Typography variant="h6">您也可以查看指定介面的所有改動記錄。</Typography>,
               placement: 'top',
               target: '.guide-2',
             }, {
-              title: '皮肤自定义上线',
+              title: '介面自定義上線',
               disableBeacon: true,
-              content: <Typography variant="h6">在系统偏好设置里，选择一个喜爱的颜色吧！比如原谅绿？</Typography>,
+              content: <Typography variant="h6">在系統喜好設定中，選擇一個喜愛的顏色吧！ 比如原諒綠？</Typography>,
               placement: 'top',
               target: '.guide-3',
             }
@@ -324,7 +324,7 @@ class RepositoryEditor extends Component<Props, States> {
             <div className="CollabProject Project" key={`collab-${collab.id}`}>
               <span className="title">
                 <GoVersions className="mr5" />
-                协同
+                協同
               </span>
               <Link to={`/repository/editor?id=${collab.id}`}>{collab.name}</Link>
             </div>

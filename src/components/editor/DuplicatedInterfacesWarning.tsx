@@ -48,7 +48,7 @@ class DuplicatedInterfacesWarning extends Component<
   static printDuplicatedInterfacesWarning(duplicated: any) {
     duplicated.forEach((interfaces: any) => {
       const key = `${interfaces[0].method} ${interfaces[0].url}`
-      console.group('警告：检测到重复接口 ' + key)
+      console.group('警告：檢測到重複介面 ' + key)
       interfaces.forEach((itf: any) => {
         console.warn(`#${itf.id} ${itf.method} ${itf.url}`)
       })
@@ -79,7 +79,7 @@ class DuplicatedInterfacesWarning extends Component<
                   {index === 0 && (
                     <>
                       <GoAlert className="icon" />
-                      <span className="msg">警告：检测到 {duplicated.length} 组重复接口</span>
+                      <span className="msg">警告：檢測到 {duplicated.length} 組重複介面</span>
                     </>
                   )}
                   <span className="itf">
@@ -107,7 +107,7 @@ class DuplicatedInterfacesWarning extends Component<
                       })
                     }}
                   >
-                    {showMore ? '收起' : '展开'}
+                    {showMore ? '收起' : '展開'}
                   </span>
                 )}
               </div>
