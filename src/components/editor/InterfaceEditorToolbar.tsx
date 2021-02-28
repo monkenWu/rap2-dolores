@@ -103,7 +103,7 @@ function InterfaceEditorToolbar(props: Props) {
           onClick={() => window.open(`${serve}/interface/backup/JSONData/${itfId}`)}
           size="small"
         >
-          导出
+          匯出
         <CloudDownload className={classes.rightIcon} />
         </Button>
       </Tooltip>
@@ -114,7 +114,7 @@ function InterfaceEditorToolbar(props: Props) {
           onClick={() => setShowHistory(true)}
           size="small"
         >
-          历史
+          歷史
         <History className={classes.rightIcon} />
         </Button>
       </Tooltip>

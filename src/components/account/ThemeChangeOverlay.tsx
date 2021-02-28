@@ -108,7 +108,7 @@ function ThemeChangeOverlay(props: Props) {
 
 export const THEME_TEMPLATES: { [key: string]: { theme: ThemeOptions, name: string } } = {
   [THEME_TEMPLATE_KEY.INDIGO]: {
-    name: '沉靛蓝',
+    name: '沉靛藍',
     theme: {
       palette: {
         primary: {
@@ -120,7 +120,7 @@ export const THEME_TEMPLATES: { [key: string]: { theme: ThemeOptions, name: stri
     }
   },
   [THEME_TEMPLATE_KEY.RED]: {
-    name: '火焰红',
+    name: '火焰紅',
     theme: {
       palette: {
         primary: {
@@ -134,7 +134,7 @@ export const THEME_TEMPLATES: { [key: string]: { theme: ThemeOptions, name: stri
     },
   },
   [THEME_TEMPLATE_KEY.BLACK]: {
-    name: '高级黑',
+    name: '高級黑',
     theme: {
       palette: {
         primary: {
@@ -148,7 +148,7 @@ export const THEME_TEMPLATES: { [key: string]: { theme: ThemeOptions, name: stri
     },
   },
   [THEME_TEMPLATE_KEY.BLUE]: {
-    name: '忧郁蓝',
+    name: '憂鬱藍',
     theme: {
       palette: {
         primary: {
@@ -162,7 +162,7 @@ export const THEME_TEMPLATES: { [key: string]: { theme: ThemeOptions, name: stri
     },
   },
   [THEME_TEMPLATE_KEY.GREEN]: {
-    name: '原谅绿',
+    name: '原諒綠',
     theme: {
       palette: {
         primary: {
@@ -190,7 +190,7 @@ export const THEME_TEMPLATES: { [key: string]: { theme: ThemeOptions, name: stri
     },
   },
   [THEME_TEMPLATE_KEY.ORANGE]: {
-    name: '动感橙',
+    name: '動感橙',
     theme: {
       palette: {
         primary: {
@@ -204,7 +204,7 @@ export const THEME_TEMPLATES: { [key: string]: { theme: ThemeOptions, name: stri
     },
   },
   [THEME_TEMPLATE_KEY.PURPLE]: {
-    name: '贵族紫',
+    name: '貴族紫',
     theme: {
       palette: {
         primary: {

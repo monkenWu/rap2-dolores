@@ -72,7 +72,7 @@ const Routes = () => {
     <article className="Routes">
       <Message messageInfo={message} />
       <div className="btn-top" onClick={() => window.scrollTo(0, 0)}>
-        回到顶部
+        回到頂部
       </div>
       <Route component={Header} />
       <div className="body">
